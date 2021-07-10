@@ -13,7 +13,6 @@
         <div class="owd-menu__item__name-inner" v-html="window.config.titleMenu || window.config.title"/>
       </div>
     </div>
-
   </li>
 </template>
 
@@ -88,10 +87,13 @@ const windowToggle = async (event, windowInstance) => {
   &:hover {
     .owd-menu__item__name {
         width: 148px;
+    }
 
-        @media (max-width: 560px) {
-          width: auto;
-        }
+    @media (max-width: 560px) {
+      .owd-menu__item__name {
+        display: block;
+        width: auto;
+      }
     }
   }
 
@@ -111,6 +113,22 @@ const windowToggle = async (event, windowInstance) => {
     &-inner {
       padding: 0 12px;
     }
+
+    @media (max-width: 560px) {
+      &__name {
+        position: fixed;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        margin: 0;
+        box-shadow: 1px 0 0 0 #141416, -20px 0 15px 0 #141416;
+        transition: none;
+        width: auto;
+        height: 48px;
+        line-height: 48px;
+        display: none;
+      }
+    }
   }
 
   &__icon {
@@ -127,41 +145,21 @@ const windowToggle = async (event, windowInstance) => {
     transition: background 0.5s ease-in-out;
     will-change: background;
     float: left;
+
+    @media (max-width: 560px) {
+      &__icon {
+        position: relative !important;
+        width: 48px;
+        z-index: 3;
+        float: none;
+        margin: 0 0 0 4px;
+        box-shadow: -4px 0 0 0 #171717;
+      }
+    }
   }
 
   &--active &__icon {
     background: $owd-dock-item-square-background;
-  }
-
-  @media (max-width: 560px) {
-    &__icon {
-      position: relative !important;
-      width: 48px;
-      z-index: 3;
-      float: none;
-      margin: 0 0 0 4px;
-      box-shadow: -4px 0 0 0 #171717;
-    }
-
-    &__name {
-      position: fixed;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      margin: 0;
-      box-shadow: 1px 0 0 0 #141416, -20px 0 15px 0 #141416;
-      transition: none;
-      width: auto;
-      height: 48px;
-      line-height: 48px;
-      display: none;
-    }
-
-    &:hover {
-      .owd-menu__item__name {
-        display: block;
-      }
-    }
   }
 }
 </style>

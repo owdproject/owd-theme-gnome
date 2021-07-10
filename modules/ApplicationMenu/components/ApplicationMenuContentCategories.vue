@@ -10,14 +10,13 @@
   >
     <ul>
       <li
-          v-for="(appList, category) in categories"
+          v-for="(category) in categories"
           :class="{selected: categorySelected === category && allowKeysNavigation}"
           :key="category"
       >
         <button
-          @click="categoryClick(category)"
-          @mouseover="(e) => categoryMouseOver(e, category)"
-          v-text="$t(`desktop.SystemBar.ApplicationMenu.categories.${category}`)"
+            @mouseover="(e) => categoryMouseOver(e, category)"
+            v-text="$t(`desktop.SystemBar.ApplicationMenu.categories.${category}`)"
         />
       </li>
     </ul>
@@ -30,8 +29,14 @@ import {ref, inject, defineProps, defineEmit, nextTick, watch} from "vue";
 const desktopOptions = inject('desktopOptions')
 
 const props = defineProps({
-  categories: Object,
-  categorySelected: String,
+  categories: {
+    type: Object,
+    default: {}
+  },
+  categorySelected: {
+    type: String,
+    default: ''
+  },
   allowKeysNavigation: Boolean
 })
 
@@ -44,12 +49,9 @@ const emit = defineEmit([
 // element ref
 const categoriesMenuList = ref(null)
 
-// keys from categories object
-const categoriesKeys = Object.keys(props.categories)
-
 // initial focus on buttons to enable key navigation
 watch(() => props.allowKeysNavigation, (active) => {
-  if (active) {
+  if (active && props.categories.length > 0) {
     if (props.categorySelected === '') {
       categoriesMenuList.value.querySelector('ul > li:first-child button').focus()
     } else {
@@ -61,26 +63,20 @@ watch(() => props.allowKeysNavigation, (active) => {
 function selectPrevCategory() {
   if (!props.allowKeysNavigation) return false
 
-  const currentIndex = categoriesKeys.indexOf(props.categorySelected)
+  const currentIndex = props.categories.indexOf(props.categorySelected)
 
   if (currentIndex - 1 > -1) {
-    emit('select', categoriesKeys[currentIndex - 1])
+    emit('select', props.categories[currentIndex - 1])
   }
 }
 
-function selectNextCategory(e) {
+function selectNextCategory() {
   if (!props.allowKeysNavigation) return false
 
-  const currentIndex = categoriesKeys.indexOf(props.categorySelected)
+  const currentIndex = props.categories.indexOf(props.categorySelected)
 
-  if (currentIndex + 1 < categoriesKeys.length) {
-    emit('select', categoriesKeys[currentIndex + 1])
-  }
-}
-
-function categoryClick(category: string) {
-  if (desktopOptions.ApplicationMenu.categoryAppsTriggerType === 'click') {
-    emit('select', category)
+  if (currentIndex + 1 < props.categories.length) {
+    emit('select', props.categories[currentIndex + 1])
   }
 }
 
@@ -90,13 +86,10 @@ function categoryMouseOver(e: Event, category: string) {
 
   // set key navigations on categories
   emit('set-navigation-keys-section', 'categories')
-
-  if (!desktopOptions.ApplicationMenu.categoryAppsTriggerType || desktopOptions.ApplicationMenu.categoryAppsTriggerType === 'mouseover') {
-    emit('select', category)
-  }
+  emit('select', category)
 }
 
-    // key navigation
+// key navigation
 function setNavigationKeysSection(value: string) {
   if (props.allowKeysNavigation && value === 'categories') {
     return emit('menu-close')

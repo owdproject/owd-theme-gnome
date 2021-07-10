@@ -37,7 +37,7 @@ const dock = reactive({
 })
 
 onMounted(() => {
-  for (const owdModuleApp of store.getters['core/modulesApp/modulesAppList']) {
+  for (const owdModuleApp of store.getters['core/modulesApp/list']) {
 
     // does module contain any windows?
     if (owdModuleApp.moduleInfo.windows && owdModuleApp.moduleInfo.windows.length > 0) {

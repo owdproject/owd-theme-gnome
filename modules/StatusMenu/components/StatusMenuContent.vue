@@ -17,9 +17,9 @@
 
 <script setup>
 import DesktopSystemBarMenuContent from '../../../components/SystemBar/components/SystemBarMenuContent.vue'
-import {defineEmit} from "vue";
+import {defineEmits} from "vue";
 
-const emit = defineEmit([
+const emit = defineEmits([
   'close'
 ])
 

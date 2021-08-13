@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmit } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 import DesktopSystemBarMenuContent from '../../../components/SystemBar/components/SystemBarMenuContent.vue'
 import NotificationList from "./NotificationList/NotificationList.vue";
 import NotificationCalendar from "./NotificationCalendar/NotificationCalendar.vue";
@@ -26,7 +26,7 @@ const props = defineProps({
   opened: Boolean
 })
 
-const emit = defineEmit([
+const emit = defineEmits([
   'close'
 ])
 

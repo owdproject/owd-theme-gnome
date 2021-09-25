@@ -10,6 +10,8 @@ $owd-background: #161616;
 $owd-color: #fff;
 $owd-scrollbar: rgba(255, 255, 255, 14%);
 
+$owd-desktop-background: #282828;
+
 // menu
 $owd-dock-item-square-background: #3483e4;
 $owd-dock-item-square-icon: #FFFFFF;
@@ -29,14 +31,16 @@ $owd-desktop-system-bar-menu-title-font-size: 14px;
 $owd-desktop-system-bar-menu-title-font-weight: 600;
 $owd-desktop-system-bar-menu-title-color: #353535;
 $owd-desktop-system-bar-menu-content-background: #353535;
-$owd-desktop-system-bar-menu-content-border-color: #1b1b1b;
 $owd-desktop-system-bar-menu-content-color: #b4b4b4;
+$owd-desktop-system-bar-menu-content-border-radius: 5px;
+$owd-desktop-system-bar-menu-content-box-shadow: 0 0 0 1px #1b1b1b;
 
 // window
 $owd-window-background: #353535;
 $owd-window-text: #b4b4b4;
 $owd-window-text-active: #fff;
-$owd-window-border: 1px solid;
+$owd-window-border-width: 1px;
+$owd-window-border-style: solid;
 $owd-window-border-radius: 8px 8px 1px 1px;
 $owd-window-border-color: #040404;
 $owd-window-border-color-inactive: #0c0c0c;
@@ -139,6 +143,7 @@ $owd-window-content-padding-no-spacing: 0;
 $owd-window-content-border-color: #222;
 $owd-window-content-separator: #2C2C2C;
 $owd-window-content-tag: #2e2e2e;
+$owd-window-content-background: inherit;
 $owd-window-content-background-1: rgba(0, 0, 0, 0.05);
 $owd-window-content-background-2: rgba(0, 0, 0, 0.1);
 

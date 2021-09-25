@@ -2,9 +2,9 @@
 import Desktop from './components/Desktop.vue'
 
 // desktop modules
-import ApplicationMenu from "./modules/ApplicationMenu";
-import NotificationMenu from "./modules/NotificationMenu";
-import StatusMenu from "./modules/StatusMenu";
+import DesktopLauncher from "./modules/DesktopLauncher";
+import DesktopNotifications from "./modules/DesktopNotifications";
+import DesktopStatus from "./modules/DesktopStatus";
 
 export default {
   name: 'gnome',
@@ -12,9 +12,9 @@ export default {
   component: Desktop,
 
   modules: [
-    ApplicationMenu,
-    NotificationMenu,
-    StatusMenu
+    DesktopLauncher,
+    DesktopNotifications,
+    DesktopStatus
   ],
 
   options: {

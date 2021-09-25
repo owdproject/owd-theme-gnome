@@ -23,22 +23,29 @@
 
     </SystemBar>
 
-    <div class="owd-desktop__content">
+    <div class="owd-desktop__content" @click="setDesktopOverview(false)">
       <slot/>
 
-      <DockMinimal v-if="desktopOptions.Dock.enabled" />
+      <DesktopDockMinimal v-if="desktopOptions.Dock.enabled" />
+
+      <WindowsContainer />
     </div>
 
-    <NoticeFullscreenExit />
+    <NoticeFullscreenExit>
+      Press <kbd>ESC</kbd> to exit full screen
+    </NoticeFullscreenExit>
   </DesktopBase>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {inject} from 'vue'
 import {useStore} from "vuex";
+
+import WindowsContainer from '@owd-client/core/src/components/window/container/WindowsContainer.vue'
+
 import DesktopBase from '@owd-client/core/src/components/desktop/DesktopBase.vue'
-import SystemBar from "./SystemBar/SystemBar.vue";
-import DockMinimal from "./DockMinimal/Dock.vue";
+import SystemBar from "./DesktopSystemBar/DesktopSystemBar.vue";
+import DesktopDockMinimal from "./DesktopDockMinimal/DesktopDock.vue";
 
 import NoticeFullscreenExit from '@owd-client/core/src/components/notice/NoticeFullscreenExit.vue'
 
@@ -67,7 +74,7 @@ const desktopOptions = inject('desktopOptions')
   }
 
   &__content {
-    background: $owd-background;
+    background-color: $owd-background;
   }
 }
 </style>

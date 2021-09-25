@@ -5,10 +5,6 @@
     <div class="owd-desktop__system-bar__left">
       <slot name="system-bar-left-prepend" />
 
-      <DesktopSystemBarMenu @click="$emit('toggleDesktopOverview')">
-        Activities
-      </DesktopSystemBarMenu>
-
       <template v-if="desktopModules.list.SystemBar && desktopModules.list.SystemBar.left">
         <template v-for="(desktopModule, i) of desktopModules.list.SystemBar.left" :key="i">
           <component

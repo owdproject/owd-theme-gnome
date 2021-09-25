@@ -1,9 +1,13 @@
 <template>
   <DesktopBase :class="{
+    'owd-desktop--overview': desktopOverview,
     'owd-desktop__system-bar--position-top': desktopOptions.SystemBar.position === 'top',
     'owd-desktop__system-bar--position-bottom': desktopOptions.SystemBar.position === 'bottom',
   }">
-    <SystemBar v-if="desktopOptions.SystemBar.enabled">
+    <SystemBar
+        v-if="desktopOptions.SystemBar.enabled"
+        @toggleDesktopOverview="setDesktopOverview(!desktopOverview)"
+    >
 
       <!-- additional slots for left area system-bar -->
       <template v-slot:system-bar-left-prepend>
@@ -38,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import {inject} from 'vue'
+import {inject, ref} from 'vue'
 import {useStore} from "vuex";
 
 import WindowsContainer from '@owd-client/core/src/components/window/container/WindowsContainer.vue'
@@ -51,10 +55,17 @@ import NoticeFullscreenExit from '@owd-client/core/src/components/notice/NoticeF
 
 const store = useStore()
 const desktopOptions = inject('desktopOptions')
+
+const desktopOverview = ref(false)
+
+function setDesktopOverview(value: boolean) {
+  desktopOverview.value = value
+}
 </script>
 
 <style scoped lang="scss">
 .owd-desktop {
+  transition: background-color 0.2s ease-in-out;
   background: $owd-desktop-system-bar-background;
 
   &__system-bar {
@@ -75,6 +86,17 @@ const desktopOptions = inject('desktopOptions')
 
   &__content {
     background-color: $owd-background;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &--overview {
+    background: $owd-desktop-background;
+
+    .owd-desktop__content {
+      box-shadow: 0 0 25px 0 rgba(0, 0, 0, 30%);
+      transform: scale(0.8) translateY(-4vh);
+      border-radius: 24px;
+    }
   }
 }
 </style>

@@ -3,7 +3,7 @@ import Desktop from './components/Desktop.vue'
 
 // desktop modules
 import DesktopLauncher from "./modules/DesktopLauncher";
-import DesktopNotifications from "./modules/DesktopNotifications";
+import DesktopNotification from "./modules/DesktopNotification";
 import DesktopStatus from "./modules/DesktopStatus";
 
 export default {
@@ -13,7 +13,7 @@ export default {
 
   modules: [
     DesktopLauncher,
-    DesktopNotifications,
+    DesktopNotification,
     DesktopStatus
   ],
 

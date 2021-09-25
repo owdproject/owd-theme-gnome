@@ -27,8 +27,8 @@
 import {computed, onMounted, ref} from 'vue'
 import {useStore} from "vuex";
 import DesktopSystemBarMenuContent from '../../../components/DesktopSystemBar/components/DesktopSystemBarMenuContent.vue'
-import DesktopLauncherMenuContentCategories from './DesktopLauncherMenuContentCategories.vue'
-import DesktopLauncherMenuContentApps from './DesktopLauncherMenuContentApps.vue'
+import DesktopLauncherMenuContentCategories from './DesktopLauncherContentCategories.vue'
+import DesktopLauncherMenuContentApps from './DesktopLauncherContentApps.vue'
 
 const emit = defineEmits([
   'close'

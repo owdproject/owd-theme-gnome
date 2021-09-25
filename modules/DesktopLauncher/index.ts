@@ -1,5 +1,5 @@
 import DesktopLauncherMenu from './components/DesktopLauncherMenu.vue'
-import DesktopLauncherMenuContent from './components/DesktopLauncherMenuContent.vue'
+import DesktopLauncherMenuContent from './components/DesktopLauncherContent.vue'
 
 export default {
   config: {

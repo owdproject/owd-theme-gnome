@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-import {getCurrentInstance, defineProps, computed} from "vue";
+import {getCurrentInstance, computed} from "vue";
 import {useStore} from "vuex";
 import WindowIconMenu from '@owd-client/core/src/components/window/icon/WindowIconMenu.vue'
 

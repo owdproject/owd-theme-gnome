@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref, getCurrentInstance, defineProps} from "vue";
+import {ref, getCurrentInstance} from "vue";
 import {useStore} from "vuex";
 
 const props = defineProps({

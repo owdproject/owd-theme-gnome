@@ -71,7 +71,7 @@
 </template>
 
 <script setup>
-import {defineProps, inject} from 'vue';
+import {inject} from 'vue';
 import DesktopSystemBarMenu from "./components/DesktopSystemBarMenu.vue";
 
 const props = defineProps({

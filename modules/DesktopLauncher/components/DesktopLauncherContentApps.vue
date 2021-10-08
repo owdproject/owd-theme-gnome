@@ -7,7 +7,6 @@
       @keyup.down="selectNextApp"
       @keyup.left="setNavigationKeysSection('categories')"
       @keyup.right="setNavigationKeysSection('apps')"
-      @key.enter="windowOpen(appSelected)"
   >
     <ul v-if="apps && apps.length > 0">
       <li

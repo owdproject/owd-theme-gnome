@@ -3,7 +3,7 @@
     <div
         v-if="window?.storage"
         :class="['owd-menu__item', {
-          'owd-menu__item--active': window.storage && window.storage.opened && !window.storage.minimized
+          'owd-menu__item--active': window.storage && !window.storage.minimized
         }]"
         @click="(e) => windowToggle(e, window)"
     >
@@ -68,17 +68,18 @@ const windowToggle = async (event, windowInstance) => {
   }
 
   if (!windowInstance.storage) {
-    windowInstance = await windowInstance.module.registerWindow(windowInstance.config)
-    windowInstance.create(true)
+    console.log("[owd] dock item clicked, window doesn't exists, create a new one ")
+    console.log(windowInstance)
+    windowInstance = await windowInstance.module.createWindow(windowInstance.config)
     windowInstance.open(true)
 
     return true
   }
 
-  if (windowInstance.storage.minimized || !windowInstance.storage.opened) {
+  if (windowInstance.storage.minimized) {
     windowInstance.open(true)
   } else {
-    windowInstance.minimize()
+    windowInstance.minimize(true)
   }
 
   return true

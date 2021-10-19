@@ -1,24 +1,29 @@
 @import '../../vuetify/VBtn/mixins';
 
 .owd-window {
-  .owd-window__nav .v-btn {
-    vertical-align: 0;
+  .owd-window__nav {
+    &__btn-group--append {
+      padding-left: 8px;
+      padding-right: 2px;
+    }
 
-    &.v-btn--essential {
-      background: none;
-      border-color: transparent;
-      box-shadow: none;
-      border-radius: 50%;
-      width: 26px;
-      min-width: 26px;
-      height: 26px;
+    .v-btn {
+      &.v-btn--essential {
+        background: none;
+        border-color: transparent;
+        box-shadow: none;
+        border-radius: 50%;
+        width: 26px;
+        min-width: 26px;
+        height: 26px;
 
-      &:before {
-        box-shadow: none !important;
-      }
+        &:before {
+          box-shadow: none !important;
+        }
 
-      i {
-        font-size: 14px;
+        i {
+          font-size: 14px;
+        }
       }
     }
   }

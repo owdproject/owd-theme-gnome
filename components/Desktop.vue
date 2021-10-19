@@ -30,7 +30,7 @@
     <div class="owd-desktop__content" @click="setDesktopOverview(false)">
       <slot/>
 
-      <DesktopDockMinimal v-if="desktopOptions.Dock.enabled" />
+      <Dock v-if="desktopOptions.Dock.enabled" />
 
       <WindowsContainer />
     </div>
@@ -44,12 +44,13 @@
 <script setup lang="ts">
 import {inject, ref} from 'vue'
 import {useStore} from "vuex";
+import {useDesktop} from "@owd-client/core/index";
 
 import WindowsContainer from '@owd-client/core/src/components/window/container/WindowsContainer.vue'
 
 import DesktopBase from '@owd-client/core/src/components/desktop/DesktopBase.vue'
 import SystemBar from "./DesktopSystemBar/DesktopSystemBar.vue";
-import DesktopDockMinimal from "./DesktopDockMinimal/DesktopDock.vue";
+import Dock from "./DesktopDockMinimal/DesktopDock.vue";
 
 import NoticeFullscreenExit from '@owd-client/core/src/components/notice/NoticeFullscreenExit.vue'
 

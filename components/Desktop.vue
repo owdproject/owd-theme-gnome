@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import {inject, ref} from 'vue'
+import {inject, ref, onMounted} from 'vue'
 import {useStore} from "vuex";
 import {useDesktop} from "@owd-client/core/index";
 
@@ -54,6 +54,7 @@ import Dock from "./DesktopDockMinimal/DesktopDock.vue";
 
 import NoticeFullscreenExit from '@owd-client/core/src/components/notice/NoticeFullscreenExit.vue'
 
+const owd = useDesktop()
 const store = useStore()
 const desktopOptions = inject('desktopOptions')
 
@@ -62,6 +63,9 @@ const desktopOverview = ref(false)
 function setDesktopOverview(value: boolean) {
   desktopOverview.value = value
 }
+
+// send desktop:mounted event
+onMounted(() => owd.emit('owd/desktop:mounted'))
 </script>
 
 <style scoped lang="scss">

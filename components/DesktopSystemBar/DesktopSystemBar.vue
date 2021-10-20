@@ -85,13 +85,23 @@ const openSystemBarDesktopModule = (event, module) => {
   module.config.opened = !module.config.opened
 
   // set content arrow position
-  module.config.arrowPosition = event.target.getBoundingClientRect().left + (event.target.offsetWidth / 2) - 12
+  // todo refactor this and make the menu a standalone component
+  switch(module.config.position) {
+    case 'left':
+      module.config.arrowPosition = event.target.getBoundingClientRect().left + (event.target.offsetWidth / 2) - 12
+      break;
+    case 'right':
+      module.config.arrowPosition = (window.innerWidth - event.target.getBoundingClientRect().right) + (event.target.offsetWidth / 2) - 28
+      break;
+  }
+
+  if (module.config.arrowPosition < 0) {
+    module.config.arrowPosition = 12
+  }
 }
 
 const closeSystemBarDesktopModule = (module) => {
-  if (module) {
-    module.config.opened = false
-  }
+  module.config.opened = false
 }
 </script>
 

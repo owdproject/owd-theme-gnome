@@ -45,6 +45,7 @@ const contentStyle = computed(() => {
 
     return `left: ${props.arrowPosition}px;`
   }
+
   return ''
 })
 </script>

@@ -11,7 +11,7 @@
         <WindowIconMenu :icon="window.config.icon" />
       </div>
       <div class="owd-menu__item__name">
-        <div class="owd-menu__item__name-inner" v-html="window.config.titleMenu || window.config.title"/>
+        <div class="owd-menu__item__name-inner" v-html="window.config.titleDock || window.config.title"/>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
         <WindowIconMenu :icon="window.config.icon" />
       </div>
       <div class="owd-menu__item__name">
-        <div class="owd-menu__item__name-inner" v-html="window.config.titleMenu || window.config.title"/>
+        <div class="owd-menu__item__name-inner" v-html="window.config.titleDock || window.config.title"/>
       </div>
     </div>
 

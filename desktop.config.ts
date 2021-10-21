@@ -6,6 +6,9 @@ import DesktopLauncher from "./modules/DesktopLauncher";
 import DesktopNotification from "./modules/DesktopNotification";
 import DesktopStatus from "./modules/DesktopStatus";
 
+// desktop i18n
+import locales from './locales'
+
 export default {
   name: 'gnome',
 
@@ -65,5 +68,7 @@ export default {
         duration: 8000
       }
     }
-  }
+  },
+
+  locales
 }

@@ -1,7 +1,7 @@
 <template>
   <DesktopSystemBarMenu>
     <span>
-      {{$t(`desktop.${config.name}.menu`)}}
+      {{$t(`${config.name}.menu`)}}
     </span>
   </DesktopSystemBarMenu>
 </template>

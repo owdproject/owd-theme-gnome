@@ -12,7 +12,7 @@
         <div class="notification-list__empty" v-else>
 
           <v-icon class="mb-5">mdi-bell</v-icon>
-          <div v-text="$t('desktop.DesktopNotifications.notificationsEmpty')" />
+          <div v-text="$t('DesktopNotifications.notificationsEmpty')" />
 
         </div>
       </div>
@@ -21,7 +21,7 @@
     <div class="notification-list__action" v-if="notifications.length > 0">
       <v-btn
           @click="$store.commit('core/notification/RESET')"
-          v-text="$t('desktop.DesktopNotifications.clear')"
+          v-text="$t('DesktopNotifications.clear')"
       />
     </div>
   </div>

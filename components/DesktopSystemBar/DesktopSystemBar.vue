@@ -103,6 +103,7 @@ const openSystemBarDesktopModule = (event, module) => {
 const closeSystemBarDesktopModule = (module) => {
   module.config.opened = false
 }
+
 </script>
 
 <style scoped lang="scss">

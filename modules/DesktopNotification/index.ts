@@ -1,5 +1,5 @@
-import DesktopNotificationTime from './components/DesktopNotificationMenu.vue'
-import DesktopNotificationContent from './components/DesktopNotificationContent.vue'
+import DesktopNotificationMenu from './components/DesktopNotificationMenu.vue'
+import DesktopNotificationMenuContent from './components/DesktopNotificationMenuContent.vue'
 
 export default {
   config: {
@@ -9,7 +9,7 @@ export default {
     opened: false
   },
   components: {
-    menu: DesktopNotificationTime,
-    content: DesktopNotificationContent
+    menu: DesktopNotificationMenu,
+    content: DesktopNotificationMenuContent
   }
 }

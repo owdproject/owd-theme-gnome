@@ -4,9 +4,9 @@
       v-click-outside="menuClose"
   >
 
-    <template v-if="desktopModules.list.StatusSystemBar && desktopModules.list.StatusSystemBar.default">
+    <template v-if="desktopModules.list.SystemBarStatus && desktopModules.list.SystemBarStatus.default">
       <component
-          v-for="(desktopModule, i) of desktopModules.list.StatusSystemBar.default" :key="i"
+          v-for="(desktopModule, i) of desktopModules.list.SystemBarStatus.default" :key="i"
           :is="desktopModule.components.content"
           @close="menuClose"
       />

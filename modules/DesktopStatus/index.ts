@@ -1,5 +1,5 @@
 import DesktopStatusMenu from './components/DesktopStatusMenu.vue'
-import DesktopStatusContent from './components/DesktopStatusContent.vue'
+import DesktopStatusMenuContent from './components/DesktopStatusMenuContent.vue'
 
 export default {
   config: {
@@ -10,6 +10,6 @@ export default {
   },
   components: {
     menu: DesktopStatusMenu,
-    content: DesktopStatusContent
+    content: DesktopStatusMenuContent
   }
 }

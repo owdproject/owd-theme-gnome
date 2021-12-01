@@ -4,11 +4,12 @@
   .owd-window__nav {
     &__btn-group--append {
       padding-left: 8px;
-      padding-right: 2px;
     }
 
-    .v-btn {
-      &.v-btn--essential {
+    .owd-btn {
+      box-sizing: border-box;
+
+      &.owd-btn--essential {
         background: none;
         border-color: transparent;
         box-shadow: none;
@@ -16,6 +17,7 @@
         width: 26px;
         min-width: 26px;
         height: 26px;
+        line-height: 24px;
 
         &:before {
           box-shadow: none !important;
@@ -29,8 +31,8 @@
   }
 
   &--focused {
-    .owd-window__nav .v-btn {
-      &.v-btn--essential {
+    .owd-window__nav .owd-btn {
+      &.owd-btn--essential {
         &:not(:hover) {
           background: none;
           border-color: transparent;
@@ -40,20 +42,20 @@
     }
   }
 
-  .owd-window__nav .v-btn {
+  .owd-window__nav .owd-btn {
     @include btn-inactive;
   }
-  &--focused .owd-window__nav .v-btn {
+  &--focused .owd-window__nav .owd-btn {
     @include btn;
   }
 
   &:not(&--preserve-material) {
-    .v-btn {
+    .owd-btn {
       @include btn-inactive;
     }
   }
   &--focused:not(&--preserve-material) {
-    .v-btn {
+    .owd-btn {
       @include btn;
     }
   }

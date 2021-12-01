@@ -35,9 +35,9 @@
       <WindowsContainer />
     </div>
 
-    <NoticeFullscreenExit>
+    <DesktopNoticeFullscreenExit>
       Press <kbd>ESC</kbd> to exit full screen
-    </NoticeFullscreenExit>
+    </DesktopNoticeFullscreenExit>
   </DesktopBase>
 </template>
 
@@ -52,7 +52,7 @@ import DesktopBase from '@owd-client/core/src/components/desktop/DesktopBase.vue
 import SystemBar from "./DesktopSystemBar/DesktopSystemBar.vue";
 import Dock from "./DesktopDockMinimal/DesktopDock.vue";
 
-import NoticeFullscreenExit from '@owd-client/core/src/components/notice/NoticeFullscreenExit.vue'
+import DesktopNoticeFullscreenExit from './DesktopNotice/DesktopNoticeFullscreenExit.vue'
 
 const owd = useDesktop()
 const store = useStore()

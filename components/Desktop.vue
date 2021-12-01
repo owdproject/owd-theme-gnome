@@ -64,7 +64,7 @@ function setDesktopOverview(value: boolean) {
   desktopOverview.value = value
 }
 
-// send desktop:mounted event
+// desktop is ready
 onMounted(() => owd.emit('owd/desktop:mounted'))
 </script>
 

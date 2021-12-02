@@ -69,7 +69,6 @@ const windowToggle = async (event, windowInstance) => {
 
   if (!windowInstance.storage) {
     console.log("[owd] dock item clicked, window doesn't exists, create a new one ")
-    console.log(windowInstance)
     windowInstance = await windowInstance.module.createWindow(windowInstance.config)
     windowInstance.open(true)
 

@@ -50,6 +50,7 @@ const dock = computed(() => {
   margin: 24px 0;
   user-select: none;
   transition: transform 0.25s ease-in-out;
+  color: white;
 
   &:hover {
     z-index: 12;

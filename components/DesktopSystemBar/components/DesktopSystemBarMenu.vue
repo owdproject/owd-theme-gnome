@@ -10,13 +10,13 @@
 .owd-desktop__system-bar__menu {
   display: inline-block;
   margin: 0 4px;
-  font-family: $owd-desktop-system-bar-menu-title-font-family;
-  font-size: $owd-desktop-system-bar-menu-title-font-size;
-  font-weight: $owd-desktop-system-bar-menu-title-font-weight;
+  font-family: var(--owd-desktop-system-bar-menu-title-font-family);
+  font-size: var(--owd-desktop-system-bar-menu-title-font-size);
+  font-weight: var(--owd-desktop-system-bar-menu-title-font-weight);
 
   &:hover {
     .owd-desktop__system-bar__menu__inner {
-      background-color: $owd-desktop-system-bar-menu-background-hover;
+      background-color: var(--owd-desktop-system-bar-menu-background-hover);
     }
   }
 

@@ -52,10 +52,10 @@ function removeNotification(notification) {
 <style scoped lang="scss">
 .notification {
   position: relative;
-  background: $owd-window-item-background;
-  border: 1px solid $owd-window-content-border-color;
+  background: var(--owd-window-item-background);
+  border: 1px solid var(--owd-window-content-border-color);
   border-radius: 5px;
-  box-shadow: $owd-window-item-box-shadow;
+  box-shadow: var(--owd-window-item-box-shadow);
   padding: 16px 32px 16px 16px;
   text-align: left;
   font-size: 15px;
@@ -136,7 +136,7 @@ function removeNotification(notification) {
   }
 
   &:hover {
-    background: $owd-window-item-background-hover;
+    background: var(--owd-window-item-background-hover);
 
     .notification-close {
       display: block;

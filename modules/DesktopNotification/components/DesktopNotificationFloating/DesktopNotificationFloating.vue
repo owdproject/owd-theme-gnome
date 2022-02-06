@@ -24,10 +24,10 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .notification {
-  background: $owd-window-item-background;
-  border: 1px solid $owd-window-content-border-color;
+  background: var(--owd-window-item-background);
+  border: 1px solid var(owd-window-content-border-color);
   border-radius: 5px;
-  box-shadow: $owd-window-item-box-shadow;
+  box-shadow: var(--owd-window-item-box-shadow);
   padding: 16px;
   text-align: left;
   font-size: 15px;

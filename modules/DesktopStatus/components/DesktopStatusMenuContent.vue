@@ -46,7 +46,7 @@ function menuClose() {
         bottom: 0;
         width: 128px;
         transform: translateX(-50%);
-        border-bottom: 1px solid $owd-window-content-border-color;
+        border-bottom: 1px solid var(--owd-window-content-border-color);
         content: '';
       }
     }
@@ -85,7 +85,7 @@ function menuClose() {
 
     &__value {
       height: 100%;
-      background-color: $owd-dock-item-square-background;
+      background-color: var(--owd-dock-item-square-background);
       border-radius: 4px;
     }
   }

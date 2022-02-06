@@ -91,7 +91,7 @@ const windowToggle = async (event, windowInstance) => {
   line-height: 48px;
   margin-bottom: 4px;
   padding: 0;
-  font-family: $owd-font-title;
+  font-family: var(--owd-font-title);
   font-size: 17px;
   text-align: left;
   cursor: pointer;
@@ -107,7 +107,7 @@ const windowToggle = async (event, windowInstance) => {
   }
 
   &__name {
-    background: $owd-dock-item-title-background;
+    background: var(--owd-dock-item-title-background);
     transition: width 0.3s ease-in-out;
     overflow: hidden;
     float: left;
@@ -130,18 +130,18 @@ const windowToggle = async (event, windowInstance) => {
     line-height: 45px;
     font-size: 24px;
     text-align: center;
-    border: $owd-dock-item-square-border;
-    border-color: $owd-dock-item-square-border-color;
-    border-radius: $owd-dock-item-square-border-radius;
-    background: darken($owd-dock-item-square-background, 8%);
-    color: $owd-dock-item-square-icon;
+    border: var(--owd-dock-item-square-border);
+    border-color: var(--owd-dock-item-square-border-color);
+    border-radius: var(--owd-dock-item-square-border-radius);
+    background: var(--owd-dock-item-square-background); // darken($owd-dock-item-square-background, 8%);
+    color: var(--owd-dock-item-square-icon);
     transition: background 0.5s ease-in-out;
     will-change: background;
     float: left;
   }
 
   &--active &__icon {
-    background: $owd-dock-item-square-background;
+    background: var(--owd-dock-item-square-background);
   }
 
   @media (max-width: 560px) {

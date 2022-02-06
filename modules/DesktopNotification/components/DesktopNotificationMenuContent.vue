@@ -58,7 +58,7 @@ function menuClose() {
   /*
   .arrow {
     border: solid $owd-window-border;
-    background: $owd-window-background;
+    background: var(--owd-window-background);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 8px;
@@ -75,7 +75,7 @@ function menuClose() {
   }
 
   .col-calendar {
-    border-left: 1px solid $owd-window-content-separator;
+    border-left: 1px solid var(--owd-desktop-system-bar-menu-content-separator);
     padding: 16px;
     text-align: left;
 

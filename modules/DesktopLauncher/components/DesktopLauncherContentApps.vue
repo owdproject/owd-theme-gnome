@@ -130,7 +130,7 @@ function setNavigationKeysSection(value: string) {
     vertical-align: middle;
     margin-top: 6px;
     margin-right: 12px;
-    color: $owd-window-text-active;
+    color: var(--owd-window-text-active);
   }
 
   &__name {
@@ -157,13 +157,13 @@ function setNavigationKeysSection(value: string) {
         width: 100%;
         text-align: left;
         cursor: pointer;
-        line-height: $owd-window-nav-height;
+        line-height: var(--owd-window-nav-height);
         padding: 0 24px;
         border-radius: 4px;
       }
 
       &.selected button {
-        background: $owd-window-item-background-hover;
+        background: var(--owd-window-item-background-hover);
       }
     }
   }

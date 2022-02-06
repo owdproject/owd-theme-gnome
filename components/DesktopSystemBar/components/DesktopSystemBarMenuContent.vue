@@ -53,9 +53,9 @@ const contentStyle = computed(() => {
 <style scoped lang="scss">
 .owd-desktop__system-bar__content {
   position: absolute;
-  background: $owd-desktop-system-bar-menu-content-background;
-  box-shadow: $owd-desktop-system-bar-menu-content-box-shadow;
-  color: $owd-desktop-system-bar-menu-content-color;
+  background: var(--owd-desktop-system-bar-menu-content-background);
+  box-shadow: var(--owd-desktop-system-bar-menu-content-box-shadow);
+  color: var(--owd-desktop-system-bar-menu-content-color);
   border-radius: 5px;
   z-index: 999;
 
@@ -67,8 +67,12 @@ const contentStyle = computed(() => {
     height: 0;
     border-left: 12.5px solid transparent;
     border-right: 12.5px solid transparent;
-    border-bottom: 12.5px solid $owd-desktop-system-bar-menu-content-background;
+    border-bottom: 12.5px solid var(--owd-desktop-system-bar-menu-content-background);
     content: '';
+  }
+
+  &__arrow {
+    top: -10px;
 
     &--left {
       left: 20px;
@@ -82,13 +86,9 @@ const contentStyle = computed(() => {
     }
   }
 
-  &__arrow {
-    top: -10px;
-  }
-
   &__arrow:before {
     top: -1px;
-    border-bottom: 12px solid $owd-desktop-system-bar-menu-content-background;
+    border-bottom: 12px solid var(--owd-desktop-system-bar-menu-content-background);
     z-index: -1;
   }
 }
@@ -110,13 +110,13 @@ const contentStyle = computed(() => {
         &__arrow, &__arrow:before {
           top: auto;
           bottom: -11px;
-          border-top: 12.5px solid $owd-desktop-system-bar-menu-title-font-weight;
+          border-top: 12.5px solid var(--owd-desktop-system-bar-menu-title-font-weight);
           border-bottom: 0;
         }
 
         &__arrow:before {
           bottom: -1px;
-          border-top: 12px solid $owd-desktop-system-bar-menu-content-background;
+          border-top: 12px solid var(--owd-desktop-system-bar-menu-content-background);
           z-index: -1;
         }
       }

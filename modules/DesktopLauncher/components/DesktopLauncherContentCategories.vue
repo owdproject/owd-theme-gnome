@@ -120,7 +120,7 @@ function setNavigationKeysSection(value: string) {
       }
 
       &.selected button {
-        background: $owd-window-item-background-hover;
+        background: var(--owd-window-item-background-hover);
       }
     }
   }

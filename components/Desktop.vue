@@ -30,14 +30,12 @@
     <div class="owd-desktop__content" @click="setDesktopOverview(false)">
       <slot/>
 
-      <Dock v-if="desktopOptions.Dock.enabled" />
+      <Dock v-if="desktopConfig.options.Dock.enabled" />
 
       <WindowsContainer />
     </div>
 
-    <DesktopNoticeFullscreenExit>
-      Press <kbd>ESC</kbd> to exit full screen
-    </DesktopNoticeFullscreenExit>
+    <DesktopNoticeFullscreenExit />
   </DesktopBase>
 </template>
 
@@ -71,7 +69,7 @@ onMounted(() => owd.emit('owd/desktop:mounted'))
 <style scoped lang="scss">
 .owd-desktop {
   transition: background-color 0.2s ease-in-out;
-  background: $owd-desktop-system-bar-background;
+  background: var(--owd-desktop-system-bar-background);
 
   &__system-bar {
     &--position-top {
@@ -90,12 +88,12 @@ onMounted(() => owd.emit('owd/desktop:mounted'))
   }
 
   &__content {
-    background-color: $owd-background;
+    background-color: var(--owd-background);
     transition: all 0.2s ease-in-out;
   }
 
   &--overview {
-    background: $owd-desktop-background;
+    background: var(--owd-desktop-background);
 
     .owd-desktop__content {
       box-shadow: 0 0 25px 0 rgba(0, 0, 0, 30%);

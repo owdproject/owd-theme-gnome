@@ -110,9 +110,9 @@ const closeSystemBarDesktopModule = (module) => {
 .owd-desktop__system-bar {
   display: grid;
   grid-template-columns: 30% 40% 30%;
-  color: $owd-desktop-system-bar-text;
-  height: $owd-desktop-system-bar-height;
-  line-height: $owd-desktop-system-bar-height;
+  color: var(--owd-desktop-system-bar-text);
+  height: var(--owd-desktop-system-bar-height);
+  line-height: var(--owd-desktop-system-bar-height);
   user-select: none;
   cursor: default;
 

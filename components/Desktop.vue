@@ -58,8 +58,12 @@ function setDesktopOverview(value: boolean) {
   desktopOverview.value = value
 }
 
-// desktop is ready
-onMounted(() => owd.emit('owd/desktop:mounted'))
+// load theme styles
+import('@mdi/font/css/materialdesignicons.css')
+import('../assets/styles/index.scss')
+
+// load theme variables
+import('../' + desktopConfig.variants[owd.config.theme?.variant ?? 'adwaita-dark'])
 </script>
 
 <style scoped lang="scss">

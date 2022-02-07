@@ -12,16 +12,16 @@
 <script setup>
 import {getCurrentInstance, inject, ref} from "vue";
 
-const desktopOptions = inject('desktopOptions')
+const desktopConfig = inject('desktopConfig')
 
 const app = getCurrentInstance();
 const moment = app.appContext.config.globalProperties.$moment
 
 const getDayOfWeek = () => {
-  return moment().format(desktopOptions.NotificationMenu.calendar.header.dayOfWeekFormat)
+  return moment().format(desktopConfig.options.NotificationMenu.calendar.header.dayOfWeekFormat)
 }
 const getDate = () => {
-  return moment().format(desktopOptions.NotificationMenu.calendar.header.dateFormat)
+  return moment().format(desktopConfig.options.NotificationMenu.calendar.header.dateFormat)
 }
 
 let dayOfWeek = ref(getDayOfWeek())

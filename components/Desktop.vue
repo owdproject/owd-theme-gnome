@@ -1,15 +1,15 @@
 <template>
   <DesktopBase :class="{
     'owd-desktop--overview': desktopOverview,
-    'owd-desktop__system-bar--position-top': desktopOptions.SystemBar.position === 'top',
-    'owd-desktop__system-bar--position-bottom': desktopOptions.SystemBar.position === 'bottom',
+    'owd-desktop__system-bar--position-top': desktopConfig.options.SystemBar.position === 'top',
+    'owd-desktop__system-bar--position-bottom': desktopConfig.options.SystemBar.position === 'bottom',
   }">
     <SystemBar
-        v-if="desktopOptions.SystemBar.enabled"
+        v-if="desktopConfig.options.SystemBar.enabled"
         @toggleDesktopOverview="setDesktopOverview(!desktopOverview)"
     >
 
-      <!-- additional slots for left area system-bar -->
+      <!-- additional slots for system-bar left area -->
       <template v-slot:system-bar-left-prepend>
         <slot name="system-bar-left-prepend"/>
       </template>
@@ -17,7 +17,7 @@
         <slot name="system-bar-left-append"/>
       </template>
 
-      <!-- additional slots for right area system-bar -->
+      <!-- additional slots for system-bar right area -->
       <template v-slot:system-bar-right-prepend>
         <slot name="system-bar-right-prepend"/>
       </template>
@@ -40,22 +40,18 @@
 </template>
 
 <script setup lang="ts">
-import {inject, ref, onMounted} from 'vue'
-import {useStore} from "vuex";
-import {useDesktop} from "@owd-client/core/index";
-
-import WindowsContainer from '@owd-client/core/src/components/window/container/WindowsContainer.vue'
+import {inject, ref} from 'vue'
+import {useDesktop} from "@owd-client/core";
 
 import DesktopBase from '@owd-client/core/src/components/desktop/DesktopBase.vue'
+import WindowsContainer from '@owd-client/core/src/components/window/container/WindowsContainer.vue'
 import SystemBar from "./DesktopSystemBar/DesktopSystemBar.vue";
 import Dock from "./DesktopDockMinimal/DesktopDock.vue";
-
 import DesktopNoticeFullscreenExit from './DesktopNotice/DesktopNoticeFullscreenExit.vue'
 
 const owd = useDesktop()
-const store = useStore()
-const desktopOptions = inject('desktopOptions')
 
+const desktopConfig = inject('desktopConfig')
 const desktopOverview = ref(false)
 
 function setDesktopOverview(value: boolean) {

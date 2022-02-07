@@ -14,7 +14,7 @@ import Notification from "./DesktopNotificationFloating.vue";
 import {ref, inject} from "vue";
 import {useStore} from "vuex";
 
-const desktopOptions = inject('desktopOptions')
+const desktopConfig = inject('desktopConfig')
 
 const store = useStore()
 
@@ -62,7 +62,7 @@ function showNextNotification() {
             // show next notification
             showNextNotification()
           },
-          nextNotification.duration || desktopOptions.NotificationMenu.floatingNotification.duration
+          nextNotification.duration || desktopConfig.options.NotificationMenu.floatingNotification.duration
       )
     }
 

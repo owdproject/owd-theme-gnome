@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import {ref, inject, nextTick, watch} from "vue";
 
-const desktopOptions = inject('desktopOptions')
+const desktopConfig = inject('desktopConfig')
 
 const props = defineProps({
   categories: {

@@ -7,7 +7,7 @@ import DesktopNotification from "./modules/DesktopNotification";
 import DesktopStatus from "./modules/DesktopStatus";
 
 // plugins
-import Vuetify from "owd-plugin-vuetify/src"
+import Vuetify from "owd-vuetify-plugin/src"
 
 // i18n
 import locales from './locales'

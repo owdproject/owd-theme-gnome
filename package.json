@@ -19,7 +19,7 @@
     "@fontsource/cantarell": "^4.4.5",
     "@fontsource/jetbrains-mono": "^4.4.5",
     "@fontsource/oswald": "^4.4.5",
-    "owd-plugin-vuetify": "https://github.com/owdproject/owd-plugin-vuetify"
+    "owd-vuetify-plugin": "https://github.com/owdproject/owd-vuetify-plugin"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",

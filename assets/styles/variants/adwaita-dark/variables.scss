@@ -56,7 +56,7 @@
   --owd-window-nav-border: 0;
   --owd-window-nav-padding: 0 6px;
 
-  --owd-window-nav-background: linear-gradient(to bottom, #2b2b2b, #262626);
+  --owd-window-nav-background: #2b2b2b;
   --owd-window-nav-background-inactive: #353535;
   --owd-window-nav-box-shadow: inset 0 1px 0 0 #383838, 0 1px 0 0 #070707;
   --owd-window-nav-box-shadow-inactive: inset 0 1px 0 0 #383838, 0 1px 0 0 #202020;
@@ -80,8 +80,8 @@
   --owd-window-button-padding: 0;
   --owd-window-button-font-size: 14px;
   --owd-window-button-icon-size: 18px;
-  --owd-window-button-background: #333333;
-  --owd-window-button-background-hover: #373737;
+  --owd-window-button-background: #353535;
+  --owd-window-button-background-hover: #383838;
   --owd-window-button-background-active: #1e1e1e;
   --owd-window-button-background-inactive: #353535;
   --owd-window-button-box-shadow: inset 0 1px 0 0 #393939;
@@ -90,7 +90,7 @@
   --owd-window-button-box-shadow-inactive: none;
   --owd-window-button-border: 1px solid;
   --owd-window-button-border-radius: 4px;
-  --owd-window-button-border-color: #1b1b1b #1b1b1b #151515 #1b1b1b;
+  --owd-window-button-border-color: #1c1c1c #1c1c1c #080808;
   --owd-window-button-border-color-hover: #1b1b1b #1b1b1b #070707 #1b1b1b;
   --owd-window-button-border-color-active: #1b1b1b;
   --owd-window-button-border-color-inactive: #202020;
@@ -100,18 +100,18 @@
   --owd-window-button-icon-color-inactive: #919190;
 
   // window buttons primary
-  --owd-window-button-primary-background: var(--owd-primary);; // linear-gradient(to bottom, #3483e4, #2379e2);
-  --owd-window-button-primary-background-hover: var(--owd-primary); //lighten(--owd-primary, 2%);
-  --owd-window-button-primary-background-active: #103e75;
-  --owd-window-button-primary-background-inactive: var(--owd-primary); //lighten(--owd-primary, 1%);
-  --owd-window-button-primary-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
-  --owd-window-button-primary-box-shadow-hover: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --owd-window-button-primary-background: #15539e;
+  --owd-window-button-primary-background-hover: #15519CFF;
+  --owd-window-button-primary-background-active: #15519CFF;
+  --owd-window-button-primary-background-inactive: var(--owd-window-button-primary-background);
+  --owd-window-button-primary-box-shadow: inset 0 1px 0 0 #1a56a0;
+  --owd-window-button-primary-box-shadow-hover: var(--owd-window-button-primary-box-shadow);
   --owd-window-button-primary-box-shadow-active: none;
   --owd-window-button-primary-box-shadow-inactive: none;
-  --owd-window-button-primary-border-color: var(--owd-primary); //darken(--owd-primary, 12%);
-  --owd-window-button-primary-border-color-hover: var(--owd-primary); //darken(--owd-primary, 12%);
-  --owd-window-button-primary-border-color-active: #0f3b71;
-  --owd-window-button-primary-border-color-inactive: var(--owd-primary); //lighten(--owd-primary, 1%);
+  --owd-window-button-primary-border-color: #0f3b71 #0f3b71 #092444;
+  --owd-window-button-primary-border-color-hover: var(--owd-window-button-primary-border-color);
+  --owd-window-button-primary-border-color-active: #15519CFF;
+  --owd-window-button-primary-border-color-inactive: var(--owd-window-button-primary-border-color);
   --owd-window-button-primary-color: #fff;
   --owd-window-button-primary-color-hover: var(--owd-window-button-primary-color);
   --owd-window-button-primary-color-active: var(--owd-window-button-primary-color);

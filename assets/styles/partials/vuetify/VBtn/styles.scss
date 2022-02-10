@@ -1,20 +1,28 @@
+@import '../../vuetify/VBtn/mixins';
+
+.v-btn {
+  @include btn-inactive;
+
+  &:before {
+    box-shadow: initial;
+    display: none !important;
+  }
+
+  .v-ripple__container {
+    display: none;
+  }
+}
+
+.owd-window--focused {
+  .v-btn {
+    @include btn;
+  }
+}
+
 .owd-btn {
   box-shadow: initial;
 
   &:before {
     box-shadow: initial;
-  }
-
-  &.owd-notice-fullscreen-exit {
-    color: #AAA !important;
-    text-align: center;
-    text-transform: inherit;
-
-    kbd {
-      border: 1px solid #BBB;
-      padding: 3px 4px;
-      margin: 0 8px;
-      border-radius: 2px;
-    }
   }
 }

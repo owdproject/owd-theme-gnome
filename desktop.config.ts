@@ -1,5 +1,8 @@
 // desktop component
 import Desktop from './components/Desktop.vue'
+import WindowApp from './components/Window/WindowApp.vue'
+import WindowAppNav from './components/Window/WindowAppNav.vue'
+import WindowAppNavButton from './components/Window/WindowAppNavButton.vue'
 
 // desktop modules
 import DesktopLauncher from "./modules/DesktopLauncher";
@@ -76,7 +79,10 @@ export default {
     locales,
 
     components: {
-        'Desktop': Desktop
+        'Desktop': Desktop,
+        'WindowApp': WindowApp,
+        'WindowAppNav': WindowAppNav,
+        'WindowAppNavButton': WindowAppNavButton
     },
 
     modules: [

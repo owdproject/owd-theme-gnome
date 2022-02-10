@@ -100,18 +100,18 @@
   --owd-window-button-icon-color-inactive: var(--owd-window-nav-color-inactive);
 
   // window buttons primary
-  --owd-window-button-primary-background: var(--owd-primary); // linear-gradient(to bottom, #3483e4, #2379e2);
-  --owd-window-button-primary-background-hover: var(--owd-primary); // lighten(--owd-primary, 2%);
-  --owd-window-button-primary-background-active: var(--owd-primary); // darken(--owd-primary, 13%);
-  --owd-window-button-primary-background-inactive: var(--owd-primary); // lighten(--owd-primary, 1%);
+  --owd-window-button-primary-background: #15519CFF;
+  --owd-window-button-primary-background-hover: #15519CFF;
+  --owd-window-button-primary-background-active: #15519CFF;
+  --owd-window-button-primary-background-inactive: var(--owd-window-button-primary-background);
   --owd-window-button-primary-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   --owd-window-button-primary-box-shadow-hover: inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   --owd-window-button-primary-box-shadow-active: none;
-  --owd-window-button-primary-box-shadow-inactive: none;
-  --owd-window-button-primary-border-color: var(--owd-primary); // darken(--owd-primary, 12%);
-  --owd-window-button-primary-border-color-hover: var(--owd-primary); // darken(--owd-primary, 12%);
-  --owd-window-button-primary-border-color-active: var(--owd-primary); // darken(--owd-primary, 13%);
-  --owd-window-button-primary-border-color-inactive: var(--owd-primary); // lighten(--owd-primary, 1%);
+  --owd-window-button-primary-box-shadow-inactive: var(--owd-window-button-primary-box-shadow);
+  --owd-window-button-primary-border-color: #0f3b71 #0f3b71 #092444;
+  --owd-window-button-primary-border-color-hover: #15519CFF;
+  --owd-window-button-primary-border-color-active: #15519CFF;
+  --owd-window-button-primary-border-color-inactive: var(--owd-window-button-primary-border-color);
   --owd-window-button-primary-color: #fff;
   --owd-window-button-primary-color-hover: var(--owd-window-button-primary-color);
   --owd-window-button-primary-color-active: var(--owd-window-button-primary-color);

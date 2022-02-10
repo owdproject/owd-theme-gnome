@@ -1,14 +1,11 @@
 <template>
   <transition name="fade-transition">
-    <v-btn
+    <div
       class="owd-notice-fullscreen-exit"
-      rounded
-      dark
-      disabled
       v-show="visible"
     >
-      <slot />
-    </v-btn>
+      Press <kbd>ESC</kbd> to exit full screen
+    </div>
   </transition>
 </template>
 
@@ -51,14 +48,27 @@ onUnmounted(() => window.removeEventListener('keydown', handleWindowInstanceFull
 </script>
 
 <style scoped lang="scss">
-.v-btn.owd-notice-fullscreen-exit {
+.owd-notice-fullscreen-exit {
   position: absolute;
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
   max-width: 90vw;
   width: 330px;
-  min-height: 44px;
+  min-height: 50px;
+  line-height: 50px;
+  text-transform: inherit;
+  font-size: 16px;
+  text-align: center;
   z-index: 999;
+  background: rgb(49 50 52 / 77%) !important;
+  color: white !important;
+
+  kbd {
+    border: 1px solid white;
+    padding: 7px 4px;
+    margin: 0 8px;
+    border-radius: 2px;
+  }
 }
 </style>

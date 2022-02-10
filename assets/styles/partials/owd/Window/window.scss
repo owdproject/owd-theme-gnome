@@ -1,9 +1,23 @@
-.owd-window {
-  &--rounded {
-    border-radius: 8px;
-  }
+@import '../../vuetify/VBtn/mixins';
 
+.owd-window {
   &__nav {
+    position: relative;
+    display: flex;
+    height: var(--owd-window-nav-height);
+    line-height: var(--owd-window-nav-height);
+    padding: var(--owd-window-nav-padding);
+    border: var(--owd-window-nav-border);
+    border-color: var(--owd-window-nav-border-color-inactive);
+    background: var(--owd-window-nav-background-inactive);
+    box-shadow: var(--owd-window-nav-box-shadow-inactive);
+    box-sizing: content-box;
+    font-family: var(--owd-window-nav-title-font-family);
+    font-weight: var(--owd-window-nav-title-font-weight);
+    font-size: var(--owd-window-nav-title-font-size);
+    user-select: none;
+    z-index: 1;
+
     &__title-inner {
       position: absolute;
       left: 50%;
@@ -13,24 +27,133 @@
       text-overflow: ellipsis;
     }
 
+    &__draggable {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+    }
+
+    &__title {
+      display: inline-block;
+      width: 100%;
+      text-align: var(--owd-window-nav-title-align);
+      padding: var(--owd-window-nav-title-padding);
+      color: var(--owd-window-nav-color-inactive);
+      cursor: default;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      pointer-events: none;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
     &__btn-group {
-      a, button:not(.owd-btn--essential) {
-        margin-top: -2px;
+      position: relative;
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      &--essentials {
+        display: flex;
+        padding-left: 12px;
       }
 
       &--prepend {
-        left: 7px;
+        left: 0;
+        padding-right: 7px;
 
-        a, button {
+        .owd-window__nav__btn {
           margin-right: 5px;
         }
       }
 
-      &--append {
-        right: 7px;
+      &--prepend + &__title {
+        width: auto;
+      }
 
-        a, button {
+      &--append {
+        right: 0;
+        padding-left: 7px;
+
+        .owd-window__nav__btn {
           margin-left: 5px;
+        }
+      }
+    }
+
+    &__btn {
+      @include btn-inactive;
+      box-sizing: border-box;
+      text-align: center;
+
+      &--essential {
+        background: none;
+        border-color: transparent;
+        box-shadow: none;
+        border-radius: 50%;
+        width: 26px;
+        min-width: 26px;
+        height: 26px;
+        line-height: 24px;
+
+        &:before {
+          box-shadow: none;
+        }
+
+        i {
+          font-size: 14px;
+        }
+      }
+
+      &:not(&--essential) {
+        width: 34px;
+        height: 34px;
+        line-height: 31px;
+
+        .owd-icon {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &--focused {
+    .owd-window__nav {
+      background: var(--owd-window-nav-background);
+      box-shadow: var(--owd-window-nav-box-shadow);
+      border-color: var(--owd-window-nav-border-color);
+
+      &__title {
+        color: var(--owd-window-nav-color);
+      }
+
+      &__btn {
+        @include btn;
+
+        &--essential {
+          &:not(:hover) {
+            background: none;
+            border-color: transparent;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--dense {
+    .owd-window__nav {
+      &__btn {
+        &:not(&--essential) {
+          width: 26px;
+          height: 26px;
+          line-height: 24px;
         }
       }
     }

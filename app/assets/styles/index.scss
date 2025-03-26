@@ -1,0 +1,10 @@
+@use './variants/adwaita-dark/variables.scss';
+
+:root {
+  --owd-gnome-font-family: 'Cantarell';
+
+  --owd-gnome-window-border-radius: 12px;
+
+  --owd-gnome-system-bar-height: 32px;
+  --owd-gnome-system-bar-padding: 4px;
+}

@@ -1,0 +1,38 @@
+.owd-window {
+  &--rounded {
+    border-radius: 8px;
+  }
+
+  &-nav {
+    &__title-inner {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 65%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__btn-group {
+      a, button:not(.v-btn--essential) {
+        margin-top: -2px;
+      }
+
+      &--prepend {
+        left: 7px;
+
+        a, button {
+          margin-right: 5px;
+        }
+      }
+
+      &--append {
+        right: 7px;
+
+        a, button {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

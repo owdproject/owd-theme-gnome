@@ -1,0 +1,23 @@
+:root {
+  --owd-gnome-button-primary-background: rgba(255, 255, 255, 0.06);
+  --owd-gnome-button-primary-hover-background: rgba(255, 255, 255, 0.1);
+  --owd-gnome-button-primary-active-background: rgba(255, 255, 255, 0.15);
+  --owd-gnome-button-lg-padding-x: 14px;
+  --owd-gnome-button-lg-padding-y: 10px;
+  --owd-gnome-button-rounded-border-radius: 32px;
+  --owd-gnome-button-gap: 8px;
+}
+
+.p-button {
+  font-weight: bold;
+
+  &-lg {
+    min-width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  &--icon {
+    --owd-gnome-button-lg-padding-x: 10px;
+  }
+}

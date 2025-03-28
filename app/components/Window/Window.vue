@@ -2,14 +2,27 @@
 const props = defineProps<{
   config?: WindowConfig
   window?: IWindowController
+  content?: any
 }>()
 
+const workspaceStore = useWorkspaceStore()
+
 provide('windowController', handleWindowControllerProps(props))
+
+function onWorkspaceWindowDragStart(e) {
+  e.dataTransfer.setData('text', props.window?.state.id)
+}
 </script>
 
 <template>
-  <CoreWindow>
-    <Sheet border rounded>
+  <CoreWindow
+      v-show="window?.state.active"
+      :draggable="workspaceStore.overview ? 'true' : 'false'"
+      @dragstart="onWorkspaceWindowDragStart"
+  >
+    <Sheet
+        border rounded
+    >
       <WindowNav>
 
         <template v-slot:nav-prepend>
@@ -22,7 +35,7 @@ provide('windowController', handleWindowControllerProps(props))
 
       </WindowNav>
 
-      <WindowContent>
+      <WindowContent v-bind="content">
 
         <slot/>
 

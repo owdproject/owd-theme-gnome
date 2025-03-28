@@ -79,7 +79,7 @@ function onWindowNavDestroy() {
   border-radius: var(--owd-gnome-window-border-radius) var(--owd-gnome-window-border-radius) 0 0;
   text-align: center;
 
-  &--active {
+  &--focused {
     background: linear-gradient(to bottom, #2b2b2b, #262626);
     box-shadow: inset 0 1px 0 0 #383838, 0 1px 0 0 #070707;
   }

@@ -1,10 +1,26 @@
 @use './variants/adwaita-dark/variables.scss';
 
+@use './partials/button.scss';
+@use './partials/slider.scss';
+
 :root {
   --owd-gnome-font-family: 'Cantarell';
 
+  --owd-gnome-primary-color: 53, 132, 228;
+  --owd-gnome-background-color: #282828;
   --owd-gnome-window-border-radius: 12px;
+
+  --owd-gnome-hover-background-color: 255, 255, 255, 0.05;
+
+  --owd-gnome-dock-bar-height: 120px;
+  --owd-gnome-dock-bar-spacing: 12px;
+  --owd-gnome-dock-bar-spacing-inner: 8px;
+  --owd-gnome-dock-bar-button-size: 64px;
 
   --owd-gnome-system-bar-height: 32px;
   --owd-gnome-system-bar-padding: 4px;
+  --owd-gnome-system-bar-menu-spacing: 8px;
+
+
+  --owd-gnome-divider-border-color: rgba(255, 255, 255, 0.06);
 }

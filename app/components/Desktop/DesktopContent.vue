@@ -4,7 +4,7 @@ const desktop = useDesktopManager()
 const classes = computed(() => {
   const list = ['owd-desktop__content']
 
-  if (desktop.config.systemBar.position) {
+  if (desktop.config.systemBar?.position) {
     list.push(
         `owd-desktop__content--system-bar-position-${desktop.config.systemBar.position}`
     )
@@ -28,8 +28,6 @@ const classes = computed(() => {
   overflow: hidden;
 
   &--system-bar-position-top {
-    height: calc(100% - var(--owd-gnome-system-bar-height));
-    top: var(--owd-gnome-system-bar-height);
   }
 }
 </style>

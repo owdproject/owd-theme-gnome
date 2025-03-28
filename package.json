@@ -14,5 +14,8 @@
   "author": {
     "name": "dxlliv",
     "url": "https://github.com/dxlliv"
+  },
+  "dependencies": {
+    "vue3-carousel": "^0.1.30"
   }
 }

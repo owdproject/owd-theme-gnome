@@ -6,23 +6,45 @@ const props = defineProps<{
 }>()
 
 const desktop = useDesktopManager()
+const workspaceStore = useWorkspaceStore()
 </script>
 
 <template>
-  <CoreDesktop v-bind="$props">
-
-    <Background/>
+  <CoreDesktop
+      v-bind="$props"
+      :class="{
+        'owd-desktop--overview-enabled': workspaceStore.overview
+    }"
+  >
 
     <SystemBar
-        v-if="desktop.config.systemBar.enabled"
+        v-if="desktop.config.systemBar?.enabled"
     />
 
-    <DesktopContent>
-      <CoreApplicationRender />
-      <slot/>
-    </DesktopContent>
+    <div class="owd-desktop__search">
+      <input placeholder="Type to search" />
+    </div>
 
-    <DockBar />
+    <WorkspacesPreview/>
+
+    <Workspaces>
+      <template v-slot="{workspaceId}">
+
+        <Background/>
+
+        <DesktopContent>
+          <CoreApplicationRender
+              :workspace-filter="workspaceId"
+          />
+          <slot/>
+        </DesktopContent>
+
+      </template>
+    </Workspaces>
+
+    <div class="owd-desktop__dock-bar">
+      <DockBar/>
+    </div>
 
   </CoreDesktop>
 </template>
@@ -31,17 +53,52 @@ const desktop = useDesktopManager()
 @use '../assets/styles/index.scss';
 
 .owd-desktop {
-  font-family: var(--owd-gnome-font-family);
+  display: flex;
+  flex-direction: column;
+  background: var(--owd-gnome-background-color);
+  font-family: var(--owd-gnome-font-family), serif;
   color: var(--owd-color);
-
-  button {
-    font-family: var(--owd-gnome-font-family);
-  }
+  overflow: hidden;
 
   &__system-bar {
+    flex: 0;
+
     &--position-bottom {
       flex-direction: column-reverse;
     }
+  }
+
+  &__search {
+    flex: 0;
+    min-height: 50px;
+    text-align: center;
+
+    input {
+      background: #383838;
+      border: 0;
+      border-radius: 24px;
+      height: calc(100% - 16px);
+      padding: 0 14px;
+      margin: 8px;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+
+  &__workspace-previews {
+    flex: 0;
+    padding: 12px 0;
+  }
+
+  &__workspace-container {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__dock-bar {
+    flex: 0;
   }
 }
 </style>

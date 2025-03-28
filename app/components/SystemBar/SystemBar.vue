@@ -1,105 +1,79 @@
 <script setup>
-const workspaces = useWorkspaces()
+const workspaceStore = useWorkspaceStore()
 
-function toggleDesktopOverview() {
-  workspaces.overview.value = !workspaces.overview.value
-}
+const classes = computed(() => {
+  const list = ['owd-desktop__system-bar']
+
+  if (workspaceStore.overview) {
+    list.push('owd-desktop__system-bar--workspace-overview-enabled')
+  }
+
+  return list
+})
 </script>
 
 <template>
-  <div class="owd-desktop__system-bar">
+  <div :class="classes">
 
-  <div class="owd-desktop__system-bar__left">
-    <slot name="system-bar-left-prepend" />
-
-    <SystemBarApplications
-        class="owd-desktop__system-bar__activities"
-        @click="toggleDesktopOverview"
-    >
-
-    </SystemBarApplications>
-  </div>
-
-      <!--
-      <template v-if="desktopModules.list.SystemBar && desktopModules.list.SystemBar.left">
-        <template v-for="(desktopModule, i) of desktopModules.list.SystemBar.left" :key="i">
-          <component
-              :is="desktopModule.components.menu"
-              :config="desktopModule.config"
-              @click="(e) => openSystemBarDesktopModule(e, desktopModule)"
-          />
-          <component
-              v-if="desktopModule.config.opened"
-              :is="desktopModule.components.content"
-              :arrow-position="desktopModule.config.arrowPosition"
-              @close="closeSystemBarDesktopModule(desktopModule)"
-          />
-        </template>
-      </template>
-
-      <slot name="system-bar-left-append" />
+    <div class="owd-desktop__system-bar__left">
+      <SystemBarWorkspaces/>
+      <SystemBarApplicationsMenu/>
     </div>
 
-      <div class="owd-desktop__system-bar__middle">
-        <template v-if="desktopModules.list.SystemBar && desktopModules.list.SystemBar.center">
-          <template v-for="(desktopModule, i) of desktopModules.list.SystemBar.center" :key="i">
-            <component
-                :is="desktopModule.components.menu"
-                :config="desktopModule.config"
-                @click="(e) => openSystemBarDesktopModule(e, desktopModule)"
-            />
-            <component
-                :is="desktopModule.components.content"
-                :opened="desktopModule.config.opened"
-                :arrow-position="desktopModule.config.arrowPosition"
-                @close="closeSystemBarDesktopModule(desktopModule)"
-            />
-          </template>
-        </template>
-      </div>
+    <div class="owd-desktop__system-bar__middle">
+      <SystemBarNotificationsMenu/>
+    </div>
 
-      <div class="owd-desktop__system-bar__right">
-        <slot name="system-bar-right-prepend" />
-
-        <template v-if="desktopModules.list.SystemBar && desktopModules.list.SystemBar.right">
-          <template v-for="(desktopModule, i) of desktopModules.list.SystemBar.right" :key="i">
-            <component
-                :is="desktopModule.components.menu"
-                :config="desktopModule.config"
-                @click="(e) => openSystemBarDesktopModule(e, desktopModule)"
-            />
-            <component
-                v-if="desktopModule.config.opened"
-                :is="desktopModule.components.content"
-                :config="desktopModule.config"
-                :arrow-position="desktopModule.config.arrowPosition"
-                @close="closeSystemBarDesktopModule(desktopModule)"
-            />
-          </template>
-        </template>
-
-        <slot name="system-bar-right-append" />
-      </div>
-      -->
+    <div class="owd-desktop__system-bar__right">
+      <SystemBarSettingsMenu />
+    </div>
 
   </div>
 </template>
 
 <style scoped lang="scss">
 .owd-desktop__system-bar {
-  position: relative;
+  width: 100%;
   height: var(--owd-gnome-system-bar-height);
   padding: var(--owd-gnome-system-bar-padding);
   background: black;
   color: white;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  transition: background 0.2s ease-in-out;
+  z-index: 3;
+
+  &--workspace-overview-enabled {
+    background: transparent;
+  }
+
+  > div {
+    > div {
+      display: inline-block;
+    }
+  }
+
+  &__left {
+    width: 20vw;
+
+    .owd-system-bar__button {
+      margin-right: 4px;
+    }
+  }
 
   &__middle {
+    flex: 1;
     text-align: center;
   }
 
   &__right {
+    width: 20vw;
     text-align: right;
+
+    .owd-system-bar__button {
+      margin-left: 4px;
+    }
 
     a {
       font-size: 11px;

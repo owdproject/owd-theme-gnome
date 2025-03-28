@@ -10,6 +10,21 @@ export default defineNuxtConfig({
         "#": resolve(__dirname, "."),
     },
 
+    css: [
+        'vue3-carousel/dist/carousel.css'
+    ],
+
+    primevue: {
+        options: {
+            theme: {
+                options: {
+                    prefix: 'owd-gnome',
+                    cssLayer: false
+                }
+            }
+        }
+    },
+
     i18n: {
         langDir: './locales',
         locales: [{ code: 'en', file: 'en.json' }],
@@ -26,7 +41,7 @@ export default defineNuxtConfig({
     },
 
     imports: {
-        dirs: ['composables', 'stores', 'utils'],
+        dirs: ['composables', 'consts', 'stores', 'utils', 'stores'],
     },
 
     runtimeConfig: {

@@ -10,10 +10,6 @@ export function useSystemBar(_config?: SystemBarConfig | undefined) {
     const enabled = ref(false)
     const windows = computed(() => applicationManager.windowsOpened)
 
-    const applicationMenu = reactive({
-        enabled: true,
-    })
-
     const menu = computed(() => {
         const systemBarMenu: any = []
 

@@ -2,14 +2,21 @@
   --owd-gnome-button-primary-background: rgba(255, 255, 255, 0.06);
   --owd-gnome-button-primary-hover-background: rgba(255, 255, 255, 0.1);
   --owd-gnome-button-primary-active-background: rgba(255, 255, 255, 0.15);
+  --owd-gnome-button-padding-x: 12px;
+  --owd-gnome-button-padding-y: 8px;
   --owd-gnome-button-lg-padding-x: 14px;
   --owd-gnome-button-lg-padding-y: 10px;
+  --owd-gnome-button-border-radius: var(--owd-gnome-input-border-radius);
   --owd-gnome-button-rounded-border-radius: 32px;
   --owd-gnome-button-gap: 8px;
 }
 
 .p-button {
   font-weight: bold;
+
+  min-width: 36px;
+  height: 36px;
+  font-size: 15px;
 
   &-lg {
     min-width: 44px;

@@ -4,7 +4,7 @@ const volumeStore = useVolumeStore()
 
 <template>
   <SystemBarSettingsMenuSlider icon-prepend="mdi:headset">
-    <Slider v-model="volumeStore.master" :min="0" :max="100" class="w-56" />
+    <Slider v-model="volumeStore.master" :min="0" :max="100" />
   </SystemBarSettingsMenuSlider>
 </template>
 

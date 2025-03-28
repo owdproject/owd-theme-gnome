@@ -1,0 +1,12 @@
+:root {
+  --owd-gnome-textarea-padding-x: var(--owd-gnome-input-padding-x);
+  --owd-gnome-textarea-padding-y: var(--owd-gnome-input-padding-y);
+
+  --owd-gnome-textarea-color: var(--owd-gnome-input-color);
+  --owd-gnome-textarea-background: rgba(255, 255, 255, 0.06);
+
+  --owd-gnome-textarea-border-radius: var(--owd-gnome-input-border-radius);
+}
+
+.p-inputtext {
+}

@@ -1,7 +1,9 @@
 @use './variants/adwaita-dark/variables.scss';
 
 @use './partials/button.scss';
+@use './partials/input.scss';
 @use './partials/slider.scss';
+@use './partials/textarea.scss';
 
 :root {
   --owd-gnome-font-family: 'Cantarell';
@@ -17,10 +19,40 @@
   --owd-gnome-dock-bar-spacing-inner: 8px;
   --owd-gnome-dock-bar-button-size: 64px;
 
+  --owd-gnome-input-color: white;
+  --owd-gnome-input-padding-x: 8px;
+  --owd-gnome-input-padding-y: 8px;
+  --owd-gnome-input-border-radius: 8px;
+
   --owd-gnome-system-bar-height: 32px;
   --owd-gnome-system-bar-padding: 4px;
   --owd-gnome-system-bar-menu-spacing: 8px;
 
 
   --owd-gnome-divider-border-color: rgba(255, 255, 255, 0.06);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+:hover::-webkit-scrollbar-thumb,
+:focus::-webkit-scrollbar-thumb,
+:active::-webkit-scrollbar-thumb,
+.show-scrollbar::-webkit-scrollbar-thumb {
+  opacity: 1;
 }

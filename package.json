@@ -2,13 +2,13 @@
   "name": "owd-theme-gnome",
   "version": "3.0.0-alpha.0",
   "description": "Open Web Desktop theme",
-  "homepage": "https://github.com/owdproject/owd-theme-gnome#readme",
+  "homepage": "https://github.com/owdproject/theme-gnome#readme",
   "bugs": {
-    "url": "https://github.com/owdproject/owd-theme-gnome/issues"
+    "url": "https://github.com/owdproject/theme-gnome/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owdproject/owd-theme-gnome.git"
+    "url": "git+https://github.com/owdproject/theme-gnome.git"
   },
   "license": "MIT",
   "author": {
@@ -16,6 +16,6 @@
     "url": "https://github.com/dxlliv"
   },
   "dependencies": {
-    "vue3-carousel": "^0.1.30"
+    "vue3-carousel": "^0.15.0"
   }
 }

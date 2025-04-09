@@ -6,7 +6,7 @@ const applicationManager = useApplicationManager()
   <div class="owd-dock-bar">
     <div class="owd-dock-bar__inner">
       <DockBarButtonApp
-          v-for="[applicationId, application] of applicationManager.appsRunning"
+          v-for="application of applicationManager.appsRunning"
           :application="application"
       />
       <Divider layout="vertical" />

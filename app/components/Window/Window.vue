@@ -1,13 +1,10 @@
 <script setup lang="ts">
 const props = defineProps<{
-  config?: WindowConfig
   window?: IWindowController
   content?: any
 }>()
 
-const workspaceStore = useWorkspaceStore()
-
-provide('windowController', handleWindowControllerProps(props))
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 
 function onWorkspaceWindowDragStart(e) {
   e.dataTransfer.setData('text', props.window?.state.id)
@@ -16,8 +13,9 @@ function onWorkspaceWindowDragStart(e) {
 
 <template>
   <CoreWindow
-      v-show="window?.state.active"
-      :draggable="workspaceStore.overview ? 'true' : 'false'"
+      v-bind="$props"
+      v-show="window?.state?.active ?? true"
+      :draggable="desktopWorkspaceStore.overview ? 'true' : 'false'"
       @dragstart="onWorkspaceWindowDragStart"
   >
     <Sheet
@@ -35,7 +33,7 @@ function onWorkspaceWindowDragStart(e) {
 
       </WindowNav>
 
-      <WindowContent v-bind="content">
+      <WindowContent>
 
         <slot/>
 

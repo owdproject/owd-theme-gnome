@@ -30,12 +30,12 @@ function onWindowNavDestroy() {
     </div>
 
     <div
-        v-if="windowController?.state.title"
+        v-if="windowController?.title"
         class="owd-window-nav__title"
     >
       <div
-          class="owd-window-nav__title-inner"
-          v-text="windowController?.state.title"
+          class="owd-window-nav__title-inner text-ellipsis"
+          v-text="windowController?.title"
       />
     </div>
 

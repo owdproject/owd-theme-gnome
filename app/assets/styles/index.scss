@@ -2,6 +2,7 @@
 
 @use './partials/button.scss';
 @use './partials/input.scss';
+@use './partials/menu.scss';
 @use './partials/slider.scss';
 @use './partials/textarea.scss';
 
@@ -10,9 +11,10 @@
 
   --owd-gnome-primary-color: 53, 132, 228;
   --owd-gnome-background-color: #282828;
+  --owd-gnome-color: #FFF;
   --owd-gnome-window-border-radius: 12px;
 
-  --owd-gnome-hover-background-color: 255, 255, 255, 0.05;
+  --owd-gnome-hover-background-color: 255, 255, 255, 0.04;
 
   --owd-gnome-dock-bar-height: 120px;
   --owd-gnome-dock-bar-spacing: 12px;

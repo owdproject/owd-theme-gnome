@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import html2canvas from "html2canvas";
 
-const workspaceStore = useWorkspaceStore()
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 const previewEnabled = ref(false)
 
 async function generateDesktopWorkspacePreview(workspaceId: string) {
@@ -19,14 +19,14 @@ async function generateDesktopWorkspacePreview(workspaceId: string) {
 }
 
 function onWorkspacePreviewClick(workspaceId: string) {
-  if (workspaceStore.active !== workspaceId) {
-    workspaceStore.setWorkspace(workspaceId)
+  if (desktopWorkspaceStore.active !== workspaceId) {
+    desktopWorkspaceStore.setWorkspace(workspaceId)
   } else {
-    workspaceStore.setOverview(false)
+    desktopWorkspaceStore.setOverview(false)
   }
 }
 
-watch(() => workspaceStore.overview, (val) => {
+watch(() => desktopWorkspaceStore.overview, (val) => {
   if (!val) {
     previewEnabled.value = false
   } else {
@@ -38,7 +38,7 @@ onMounted(async () => {
   setTimeout(async () => {
     // generate all workspace preview
 
-    for (const workspaceId of workspaceStore.list) {
+    for (const workspaceId of desktopWorkspaceStore.list) {
       await generateDesktopWorkspacePreview(workspaceId)
     }
   }, 500)
@@ -54,12 +54,12 @@ onMounted(async () => {
   >
     <div class="owd-desktop__workspace-previews__container">
       <div
-          v-for="(workspaceId) of workspaceStore.list"
+          v-for="(workspaceId) of desktopWorkspaceStore.list"
           :key="workspaceId"
           :data-workspace-id="workspaceId"
           :class="[
             'owd-desktop__workspace-previews__item',
-            {'owd-desktop__workspace-previews__item--active': workspaceId === workspaceStore.active}
+            {'owd-desktop__workspace-previews__item--active': workspaceId === desktopWorkspaceStore.active}
         ]"
           @click="onWorkspacePreviewClick(workspaceId)"
       />

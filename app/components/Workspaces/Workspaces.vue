@@ -2,7 +2,7 @@
 import {Carousel, Slide} from 'vue3-carousel';
 
 const applicationManager = useApplicationManager()
-const workspaceStore = useWorkspaceStore()
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 
 function onWorkspaceWindowDragDrop(e: any, workspaceId: string) {
   e.preventDefault();
@@ -14,10 +14,10 @@ function onWorkspaceWindowDragDrop(e: any, workspaceId: string) {
 }
 
 function onWorkspaceClick(workspaceId: string) {
-  if (workspaceStore.active !== workspaceId) {
-    workspaceStore.setWorkspace(workspaceId)
+  if (desktopWorkspaceStore.active !== workspaceId) {
+    desktopWorkspaceStore.setWorkspace(workspaceId)
   } else {
-    workspaceStore.setOverview(false)
+    desktopWorkspaceStore.setOverview(false)
   }
 }
 </script>
@@ -26,14 +26,16 @@ function onWorkspaceClick(workspaceId: string) {
   <div class="owd-desktop__workspace-container">
 
     <Carousel
-        :model-value="workspaceStore.workspaceActiveIndex"
+        :model-value="desktopWorkspaceStore.workspaceActiveIndex"
         :items-to-show="1"
         snap-align="start"
-        :mouse-drag="false"
+        :mouse-drag="true"
+        :mouse-wheel="true"
         :touch-drag="false"
+        :enabled="false"
     >
       <Slide
-          v-for="(workspaceId, index) of workspaceStore.list"
+          v-for="(workspaceId, index) of desktopWorkspaceStore.list"
           :key="index"
           @click.native="onWorkspaceClick(workspaceId)"
           @drop="e => onWorkspaceWindowDragDrop(e, workspaceId)"

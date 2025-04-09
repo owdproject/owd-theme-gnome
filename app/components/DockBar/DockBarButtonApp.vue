@@ -3,7 +3,7 @@ const props = defineProps<{
   application: IApplicationController
 }>()
 
-const workspaceStore = useWorkspaceStore()
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 
 function onApplicationClick() {
   const lastWindow = Array.from(props.application.windows.entries()).pop()
@@ -11,8 +11,8 @@ function onApplicationClick() {
   if (lastWindow) {
     const lastWindowWorkspace = lastWindow[1].state.workspace
 
-    workspaceStore.setWorkspace(lastWindowWorkspace)
-    workspaceStore.setOverview(false)
+    desktopWorkspaceStore.setWorkspace(lastWindowWorkspace)
+    desktopWorkspaceStore.setOverview(false)
   }
 }
 </script>

@@ -1,10 +1,10 @@
 <script setup>
-const workspaceStore = useWorkspaceStore()
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 
 const classes = computed(() => {
   const list = ['owd-desktop__system-bar']
 
-  if (workspaceStore.overview) {
+  if (desktopWorkspaceStore.overview) {
     list.push('owd-desktop__system-bar--workspace-overview-enabled')
   }
 

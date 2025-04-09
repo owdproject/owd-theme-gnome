@@ -1,8 +1,8 @@
 <script setup>
-const workspaceStore = useWorkspaceStore()
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 
 function toggleDesktopOverview() {
-  workspaceStore.setOverview(!workspaceStore.overview)
+  desktopWorkspaceStore.setOverview(!desktopWorkspaceStore.overview)
 }
 </script>
 

@@ -1,10 +1,18 @@
 <script setup lang="ts">
-const volumeStore = useVolumeStore()
+const desktopVolumeStore = useDesktopVolumeStore()
+
+const volume = ref(desktopVolumeStore.master)
+
+const saveMasterVolumeDebounced = useDebounceFn(() => desktopVolumeStore.setMasterVolume(volume.value), 250)
+
+watch(() => volume.value, value => {
+  saveMasterVolumeDebounced()
+})
 </script>
 
 <template>
   <SystemBarSettingsMenuSlider icon-prepend="mdi:headset">
-    <Slider v-model="volumeStore.master" :min="0" :max="100" />
+    <Slider v-model="volume" :min="0" :max="100" />
   </SystemBarSettingsMenuSlider>
 </template>
 

@@ -1,4 +1,4 @@
-export function useSystemBar(_config?: SystemBarConfig | undefined) {
+export function useSystemBar(_config?: DesktopSystemBarConfig | undefined) {
     const applicationManager = useApplicationManager()
     const desktopManager = useDesktopManager()
 

@@ -2,18 +2,18 @@
 import '#/desktop.config'
 
 const props = defineProps<{
-  systemBar?: SystemBarConfig
+  systemBar?: DesktopSystemBarConfig
 }>()
 
 const desktop = useDesktopManager()
-const workspaceStore = useWorkspaceStore()
+const desktopWorkspaceStore = useDesktopWorkspaceStore()
 </script>
 
 <template>
   <CoreDesktop
       v-bind="$props"
       :class="{
-        'owd-desktop--overview-enabled': workspaceStore.overview
+        'owd-desktop--overview-enabled': desktopWorkspaceStore.overview
     }"
   >
 
@@ -58,7 +58,6 @@ const workspaceStore = useWorkspaceStore()
   background: var(--owd-gnome-background-color);
   font-family: var(--owd-gnome-font-family), serif;
   color: var(--owd-color);
-  overflow: hidden;
 
   &__system-bar {
     flex: 0;

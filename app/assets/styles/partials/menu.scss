@@ -1,26 +1,26 @@
 :root {
-  --owd-gnome-menu-background: var(--owd-gnome-background-color);
-  --owd-gnome-menu-color: var(--owd-gnome-color);
-  --owd-gnome-menu-shadow: var(--owd-gnome-border);
-  --owd-gnome-menu-item-padding: 8px 8px;
-  --owd-gnome-menu-submenu-label-padding: 4px 8px;
-  --owd-gnome-menu-submenu-label-font-weight: 600;
+  --p-menu-background: var(--p-background-color);
+  --p-menu-color: var(--p-color);
+  --p-menu-shadow: var(--p-border);
+  --p-menu-item-padding: 8px 8px;
+  --p-menu-submenu-label-padding: 4px 8px;
+  --p-menu-submenu-label-font-weight: 600;
 
-  --owd-gnome-menu-item-focus-background: rgba(var(--owd-gnome-hover-background-color));
+  --p-menu-item-focus-background: rgba(var(--p-hover-background-color));
 
-  --owd-gnome-menubar-item-padding: 10px 12px;
-  --owd-gnome-menubar-base-item-padding: 8px 16px;
+  --p-menubar-item-padding: 10px 12px;
+  --p-menubar-base-item-padding: 8px 16px;
 }
 
 .p-menubar {
   &-submenu {
     border-radius: 8px;
-    background: var(--owd-gnome-menu-background);
-    box-shadow: var(--owd-gnome-border);
+    background: var(--p-menu-background);
+    box-shadow: var(--p-border);
 
     .p-menubar-item {
       &:hover {
-        background: rgba(var(--owd-gnome-hover-background-color));
+        background: rgba(var(--p-hover-background-color));
       }
     }
 

@@ -12,8 +12,8 @@
 .owd-dock-bar__button {
   position: relative;
   display: inline-block;
-  width: var(--owd-gnome-dock-bar-button-size);
-  height: var(--owd-gnome-dock-bar-button-size);
+  width: var(--p-dock-bar-button-size);
+  height: var(--p-dock-bar-button-size);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0);
   transition: background 0.2s;

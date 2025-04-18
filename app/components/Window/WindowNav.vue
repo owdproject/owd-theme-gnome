@@ -76,7 +76,7 @@ function onWindowNavDestroy() {
   font-weight: bold;
   background: #353535;
   box-shadow: inset 0 1px 0 0 #383838, 0 1px 0 0 #202020;
-  border-radius: var(--owd-gnome-window-border-radius) var(--owd-gnome-window-border-radius) 0 0;
+  border-radius: var(--p-window-border-radius) var(--p-window-border-radius) 0 0;
   text-align: center;
 
   &--focused {

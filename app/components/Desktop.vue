@@ -55,9 +55,9 @@ const desktopWorkspaceStore = useDesktopWorkspaceStore()
 .owd-desktop {
   display: flex;
   flex-direction: column;
-  background: var(--owd-gnome-background-color);
-  font-family: var(--owd-gnome-font-family), serif;
-  color: var(--owd-color);
+  background: var(--p-background-color);
+  font-family: var(--p-font-family), serif;
+  color: var(--p-color);
 
   &__system-bar {
     flex: 0;

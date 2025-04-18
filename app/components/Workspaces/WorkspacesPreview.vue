@@ -94,7 +94,7 @@ onMounted(async () => {
     overflow: hidden;
 
     &--active {
-      box-shadow: 0 0 0 3px rgb(var(--owd-gnome-primary-color));
+      box-shadow: 0 0 0 3px rgb(var(--p-primary-color));
     }
 
     canvas {

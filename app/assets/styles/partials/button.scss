@@ -1,14 +1,14 @@
 :root {
-  --owd-gnome-button-primary-background: rgba(255, 255, 255, 0.06);
-  --owd-gnome-button-primary-hover-background: rgba(255, 255, 255, 0.1);
-  --owd-gnome-button-primary-active-background: rgba(255, 255, 255, 0.15);
-  --owd-gnome-button-padding-x: 12px;
-  --owd-gnome-button-padding-y: 8px;
-  --owd-gnome-button-lg-padding-x: 14px;
-  --owd-gnome-button-lg-padding-y: 10px;
-  --owd-gnome-button-border-radius: var(--owd-gnome-input-border-radius);
-  --owd-gnome-button-rounded-border-radius: 32px;
-  --owd-gnome-button-gap: 8px;
+  --p-button-primary-background: rgba(255, 255, 255, 0.06);
+  --p-button-primary-hover-background: rgba(255, 255, 255, 0.1);
+  --p-button-primary-active-background: rgba(255, 255, 255, 0.15);
+  --p-button-padding-x: 12px;
+  --p-button-padding-y: 8px;
+  --p-button-lg-padding-x: 14px;
+  --p-button-lg-padding-y: 10px;
+  --p-button-border-radius: var(--p-input-border-radius);
+  --p-button-rounded-border-radius: 32px;
+  --p-button-gap: 8px;
 }
 
 .p-button {
@@ -25,6 +25,6 @@
   }
 
   &--icon {
-    --owd-gnome-button-lg-padding-x: 10px;
+    --p-button-lg-padding-x: 10px;
   }
 }

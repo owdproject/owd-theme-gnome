@@ -14,17 +14,6 @@ export default defineNuxtConfig({
         'vue3-carousel/dist/carousel.css'
     ],
 
-    primevue: {
-        options: {
-            theme: {
-                options: {
-                    prefix: 'owd-gnome',
-                    cssLayer: false
-                }
-            }
-        }
-    },
-
     i18n: {
         langDir: './locales',
         locales: [{ code: 'en', file: 'en.json' }],

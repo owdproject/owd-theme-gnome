@@ -48,7 +48,7 @@ function onWorkspaceWindowDragStart(e) {
   border-style: solid;
   border-color: #0c0c0c;
   box-shadow: 0 0 10px 0 rgba(21, 21, 21, 0.5);
-  border-radius: var(--owd-gnome-window-border-radius);
+  border-radius: var(--p-window-border-radius);
 
   :deep(> .owd-sheet) {
     display: flex;

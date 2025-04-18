@@ -29,7 +29,7 @@ onClickOutside(settingsMenuElement, () => settingsMenu.enabled.value = false)
 
 <style lang="scss" scoped>
 .owd-system-bar__settings-menu {
-  right: var(--owd-gnome-system-bar-menu-spacing);
+  right: var(--p-system-bar-menu-spacing);
   min-height: 200px;
   width: 400px;
   padding: 16px;

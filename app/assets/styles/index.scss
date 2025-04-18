@@ -7,31 +7,31 @@
 @use './partials/textarea.scss';
 
 :root {
-  --owd-gnome-font-family: 'Cantarell';
+  --p-font-family: 'Cantarell';
 
-  --owd-gnome-primary-color: 53, 132, 228;
-  --owd-gnome-background-color: #282828;
-  --owd-gnome-color: #FFF;
-  --owd-gnome-window-border-radius: 12px;
+  --p-primary-color: 53, 132, 228;
+  --p-background-color: #282828;
+  --p-color: #FFF;
+  --p-window-border-radius: 12px;
 
-  --owd-gnome-hover-background-color: 255, 255, 255, 0.04;
+  --p-hover-background-color: 255, 255, 255, 0.04;
 
-  --owd-gnome-dock-bar-height: 120px;
-  --owd-gnome-dock-bar-spacing: 12px;
-  --owd-gnome-dock-bar-spacing-inner: 8px;
-  --owd-gnome-dock-bar-button-size: 64px;
+  --p-dock-bar-height: 120px;
+  --p-dock-bar-spacing: 12px;
+  --p-dock-bar-spacing-inner: 8px;
+  --p-dock-bar-button-size: 64px;
 
-  --owd-gnome-input-color: white;
-  --owd-gnome-input-padding-x: 8px;
-  --owd-gnome-input-padding-y: 8px;
-  --owd-gnome-input-border-radius: 8px;
+  --p-input-color: white;
+  --p-input-padding-x: 8px;
+  --p-input-padding-y: 8px;
+  --p-input-border-radius: 8px;
 
-  --owd-gnome-system-bar-height: 32px;
-  --owd-gnome-system-bar-padding: 4px;
-  --owd-gnome-system-bar-menu-spacing: 8px;
+  --p-system-bar-height: 32px;
+  --p-system-bar-padding: 4px;
+  --p-system-bar-menu-spacing: 8px;
 
 
-  --owd-gnome-divider-border-color: rgba(255, 255, 255, 0.06);
+  --p-divider-border-color: rgba(255, 255, 255, 0.06);
 }
 
 ::-webkit-scrollbar {

@@ -34,7 +34,7 @@ onClickOutside(applicationMenuElement, () => applicationMenu.enabled.value = fal
 
 <style scoped lang="scss">
 .owd-system-bar__applications-menu {
-  left: var(--owd-gnome-system-bar-menu-spacing);
+  left: var(--p-system-bar-menu-spacing);
   height: 440px;
   max-height: 80dvh;
   width: 400px;
@@ -53,14 +53,14 @@ onClickOutside(applicationMenuElement, () => applicationMenu.enabled.value = fal
   :deep(.owd-list-item) {
     &:hover {
       border-radius: 8px;
-      background: rgba(var(--owd-gnome-hover-background-color));
+      background: rgba(var(--p-hover-background-color));
     }
   }
 }
 
 .owd-system-bar__menu {
   &__title {
-    background: var(--owd-elevation-inactive);
+    background: var(--p-elevation-inactive);
     width: 36px;
   }
 

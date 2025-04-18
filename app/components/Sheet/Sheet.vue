@@ -24,6 +24,6 @@ const classes = computed(() => {
 .owd-sheet {
   background: #353535;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05);
-  border-radius: var(--owd-gnome-window-border-radius);
+  border-radius: var(--p-window-border-radius);
 }
 </style>

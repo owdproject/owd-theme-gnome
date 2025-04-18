@@ -17,17 +17,17 @@ const applicationManager = useApplicationManager()
 
 <style scoped lang="scss">
 .owd-dock-bar {
-  padding: var(--owd-gnome-dock-bar-spacing);
+  padding: var(--p-dock-bar-spacing);
   text-align: center;
 
   &__inner {
     display: inline-flex;
     flex-direction: row;
-    gap: var(--owd-gnome-dock-bar-spacing);
+    gap: var(--p-dock-bar-spacing);
     margin: 0 auto;
-    padding: var(--owd-gnome-dock-bar-spacing);
+    padding: var(--p-dock-bar-spacing);
     border-radius: 24px;
-    background: rgba(var(--owd-gnome-hover-background-color));
+    background: rgba(var(--p-hover-background-color));
   }
 
   .p-divider-vertical:before {

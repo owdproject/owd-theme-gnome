@@ -73,7 +73,7 @@ const classes = computed(() => {
     top: 2px;
     width: calc(100% - 4px);
     height: calc(100% - 4px);
-    outline: var(--owd-win95-sheet-color) solid 2px;
+    outline: var(--p-win95-sheet-color) solid 2px;
   }
 
   &--bolded {

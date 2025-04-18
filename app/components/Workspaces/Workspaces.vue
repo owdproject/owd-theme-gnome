@@ -29,10 +29,10 @@ function onWorkspaceClick(workspaceId: string) {
         :model-value="desktopWorkspaceStore.workspaceActiveIndex"
         :items-to-show="1"
         snap-align="start"
-        :mouse-drag="true"
-        :mouse-wheel="true"
-        :touch-drag="false"
-        :enabled="false"
+        :mouse-drag="false"
+        :mouse-wheel="desktopWorkspaceStore.overview"
+        :touch-drag="desktopWorkspaceStore.overview"
+        @keydown.stop
     >
       <Slide
           v-for="(workspaceId, index) of desktopWorkspaceStore.list"
@@ -61,7 +61,7 @@ function onWorkspaceClick(workspaceId: string) {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     will-change: transform;
 
     &-inner {

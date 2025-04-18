@@ -15,7 +15,7 @@
   padding: 8px 16px;
 
   &:hover {
-    background: var(--owd-elevation-inactive);
+    background: var(--p-elevation-inactive);
   }
 }
 </style>

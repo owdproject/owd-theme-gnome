@@ -34,8 +34,8 @@ const classes = computed(() => {
 <style scoped lang="scss">
 .owd-desktop__system-bar {
   width: 100%;
-  height: var(--owd-gnome-system-bar-height);
-  padding: var(--owd-gnome-system-bar-padding);
+  height: var(--p-system-bar-height);
+  padding: var(--p-system-bar-padding);
   background: black;
   color: white;
   box-sizing: border-box;

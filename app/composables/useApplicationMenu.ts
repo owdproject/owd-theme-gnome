@@ -3,23 +3,27 @@ const categoryActive = ref()
 
 export function useApplicationMenu() {
     const applicationManager = useApplicationManager()
+    const appEntries = useAppEntries()
 
     const categories = computed(() => {
         return getSortedCategories(applicationManager.apps);
     })
 
-    const appsByCategoryActive = computed(() => {
+    const appEntriesByActiveCategory = computed(() => {
         if (!categoryActive.value) {
             return []
         }
 
-        return applicationManager.appsByCategory[categoryActive.value]
+        return appEntries.sortedAppEntries(
+            'title',
+            entry => entry.category === categoryActive.value
+        ).value
     })
 
     return {
         enabled,
         categories,
         categoryActive,
-        appsByCategoryActive,
+        appEntriesByActiveCategory,
     }
 }

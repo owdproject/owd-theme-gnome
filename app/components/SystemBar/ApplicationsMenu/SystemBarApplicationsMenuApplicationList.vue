@@ -2,17 +2,20 @@
 const applicationManager = useApplicationManager()
 const applicationMenu = useApplicationMenu()
 
-function onApplicationClick(applicationId: string) {
-  applicationManager.openApp(applicationId)
+function onAppEntryClick(appEntry: ApplicationEntryWithInherited) {
+  applicationManager.execAppCommand(
+      appEntry.application.id,
+      appEntry.command,
+  )
 }
 </script>
 
 <template>
   <List>
     <SystemBarApplicationsMenuApplicationItem
-        v-for="application of applicationMenu.appsByCategoryActive.value"
-        :application="application"
-        @click="onApplicationClick(application.config.id)"
+        v-for="entry of applicationMenu.appEntriesByActiveCategory.value"
+        :entry="entry"
+        @click="onAppEntryClick(entry)"
     />
   </List>
 </template>

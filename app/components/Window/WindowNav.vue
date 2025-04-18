@@ -43,19 +43,7 @@ function onWindowNavDestroy() {
 
       <slot name="append" />
 
-      <!--
-      <ButtonMinimize
-          v-if="!windowController?.instanced || windowController?.isMinimizable"
-          size="sm"
-          @click="onWindowMinimize"
-      />
-      <ButtonMaximize
-          v-if="windowController?.isMaximizable"
-          size="sm"
-          @click="onWindowMaximize"
-      />
-      -->
-      <WindowNavButtonClose
+      <ButtonWindowNavClose
           v-if="!windowController?.instanced || windowController?.isDestroyable"
           @click="onWindowNavDestroy"
       />

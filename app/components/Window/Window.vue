@@ -23,11 +23,11 @@ function onWorkspaceWindowDragStart(e) {
     >
       <WindowNav>
 
-        <template v-slot:nav-prepend>
+        <template v-slot:prepend>
           <slot name="nav-prepend"/>
         </template>
 
-        <template v-slot:nav-append>
+        <template v-slot:append>
           <slot name="nav-append"/>
         </template>
 

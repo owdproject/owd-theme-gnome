@@ -16,6 +16,7 @@
     "url": "https://github.com/dxlliv"
   },
   "dependencies": {
-    "vue3-carousel": "^0.15.0"
+    "vue3-carousel": "^0.15.0",
+    "html2canvas": "^1.4.1"
   }
 }

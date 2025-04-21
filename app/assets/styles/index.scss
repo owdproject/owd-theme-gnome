@@ -4,6 +4,7 @@
 @use './partials/input.scss';
 @use './partials/menu.scss';
 @use './partials/slider.scss';
+@use './partials/terminal.scss';
 @use './partials/textarea.scss';
 
 :root {
@@ -22,9 +23,9 @@
   --p-dock-bar-button-size: 64px;
 
   --p-input-color: white;
-  --p-input-padding-x: 8px;
-  --p-input-padding-y: 8px;
-  --p-input-border-radius: 8px;
+  --owd-input-padding-x: 8px;
+  --owd-input-padding-y: 8px;
+  --owd-input-border-radius: 8px;
 
   --p-system-bar-height: 32px;
   --p-system-bar-padding: 4px;

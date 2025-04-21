@@ -1,11 +1,11 @@
 :root {
-  --p-inputtext-padding-x: var(--p-input-padding-x);
-  --p-inputtext-padding-y: var(--p-input-padding-y);
+  --p-inputtext-padding-x: var(--owd-input-padding-x);
+  --p-inputtext-padding-y: var(--owd-input-padding-y);
 
   --p-inputtext-color: var(--p-input-color);
   --p-inputtext-background: rgba(255, 255, 255, 0.06);
 
-  --p-inputtext-border-radius: var(--p-input-border-radius);
+  --p-inputtext-border-radius: var(--owd-input-border-radius);
 }
 
 .p-inputtext {

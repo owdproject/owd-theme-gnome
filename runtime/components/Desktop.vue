@@ -2,8 +2,6 @@
 import {useDesktopManager} from "@owdproject/core/runtime/composables/useDesktopManager"
 import {useDesktopWorkspaceStore} from "@owdproject/core/runtime/stores/storeDesktopWorkspace"
 
-import '../../desktop.config'
-
 const props = defineProps<{
   systemBar?: DesktopSystemBarConfig
 }>()

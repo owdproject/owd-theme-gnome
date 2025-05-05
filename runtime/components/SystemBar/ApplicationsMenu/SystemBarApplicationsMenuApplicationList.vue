@@ -10,6 +10,8 @@ function onAppEntryClick(appEntry: ApplicationEntryWithInherited) {
       appEntry.application.id,
       appEntry.command,
   )
+
+  applicationMenu.enabled.value = false
 }
 </script>
 

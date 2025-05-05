@@ -13,6 +13,7 @@ export default {
             internet: "Internet",
             office: "Office",
             productivity: "Productivity",
+            'system-tools': "System Tools",
             programming: "Programming",
             utilities: "Utilities",
             tools: "Tools",

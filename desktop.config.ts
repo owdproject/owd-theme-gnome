@@ -1,10 +1,15 @@
+import {defineDesktopConfig} from "@owdproject/core/runtime/utils/utilsDesktop"
+
 export default defineDesktopConfig({
     name: 'gnome',
-    compatibility: '3.0.0-alpha.0',
 
     systemBar: {
         enabled: true,
         position: 'top',
         startButton: false
+    },
+
+    workspaces: {
+        enabled: true
     }
 })
